@@ -1,0 +1,53 @@
+.contact {
+    min-height: 100vh;
+    padding: 40px 20px;
+    margin: 0 auto;
+    color: white;
+    background-color: #0f172a;
+    text-align: center;
+}
+
+.contact h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.contact p {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+}
+
+.contact-form {
+    width: 70%;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.contact-form .form-label {
+    color: white; /* ensures labels are visible */
+}
+
+.contact-form .form-control {
+    padding: 0.75rem;
+    font-size: 1rem;
+    background-color: #1e293b; /* optional: dark form field */
+    border: none;
+    color: white;
+}
+
+.contact-form .form-control::placeholder {
+    color: #ccc;
+}
+
+.submit-button {
+    background-color: black;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    cursor: pointer;
+    border-radius: 5px;
+    width: 60%;
+    max-width: 300px;
+    font-weight: bold;
+    display: block;
+    margin: 1rem auto 0 auto; /* centers the button */
+}
