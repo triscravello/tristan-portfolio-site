@@ -33,17 +33,11 @@ export const solo_projects = [
         demo: "https://command-spacetravel.netlify.app/",
     },
     {
-        title: "Jeopardy",
-        description: "",
-        technologies: ["JavaScript", "HTML", "CSS"], 
-        status: "Completed",
-        github: "https://github.com/triscravello/Jeopardy-App"
-    },
-    {
         title: "Pokedex",
         description: "A React application that displays Pokemon cards using props and components. Randomly generates two hands and determines the winner based on total experience.",
         technologies: ["React", "JavaScript", "HTML", "CSS"],
         status: "Completed",
-        github: "https://github.com/triscravello/React-Props-Pokedex"
+        github: "https://github.com/triscravello/React-Pokedex",
+        demo: "https://reactproppokedex.netlify.app/"
     }
 ]
