@@ -14,6 +14,7 @@ export const solo_projects = [
         description: "Modern, responsive portfolio website showcasing full-stack development skills. Built with React and featuring project galleries, semantic HTML structure, and optimized performance for professional presentation.",
         technologies: ["React", "HTML", "CSS", "JavaScript"],
         status: "Current",
+        github: "https://github.com/triscravello/tristan-portfolio-site"
     }, 
     {
         title: "Dog Adoption API Platform",
