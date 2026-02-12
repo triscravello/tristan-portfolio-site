@@ -1,16 +1,79 @@
-# React + Vite
+# Tristan Portfolio Site
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A personal portfolio website built with React showcasing my projects and experience.
 
-Currently, two official plugins are available:
+## Live Demo
+Visit the live site:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Built With
+- React 19
+- React Router
+- CSS3
 
-## React Compiler
+## Project Structure 
+- `/src/components` - Reusable React components (Navbar, Footer, and ProjectCard)
+- `/src/pages/` - Main page components (Home, About, Projects, Contact)
+- `/src/assets/` - Images and static assets
+- `/public/` - Public assets and HTML template
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+```
+├── 📜 README.md
+├── 🟨 eslint.config.js
+├── 📄 index.html
+├── 🗂️ package-lock.json
+├── 🗂️ package.json
+├── 📁 public
+├── 📁 src
+│ ├── 🎨 App.css
+│ ├── 🟦 App.jsx
+│ ├── 📁 assets
+│ │ ├── 🖼️ react.svg
+│ ├── 📁 components
+│ │ ├── 🎨 Footer.css
+│ │ ├── 🟦 Footer.jsx
+│ │ ├── 🎨 Navbar.css
+│ │ ├── 🟦 Navbar.jsx
+│ │ ├── 🎨 ProjectCard.css
+│ │ ├── 🟦 ProjectCard.jsx
+│ ├── 📁 data
+│ │ ├── 🟦 projectsData.jsx
+│ ├── 🎨 index.css
+│ ├── 🟦 main.jsx
+│ ├── 📁 pages
+│ │ ├── 🎨 About.css
+│ │ ├── 🟦 About.jsx
+│ │ ├── 🎨 Contact.css
+│ │ ├── 🟦 Contact.jsx
+│ │ ├── 🎨 Home.css
+│ │ ├── 🟦 Home.jsx
+│ │ ├── 🎨 Projects.css
+│ │ ├── 🟦 Projects.jsx
+├── 🟨 vite.config.js
 
-## Expanding the ESLint configuration
+```
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Development
+
+### Prerequisites
+- Node.js (v18 or higher)
+- npm
+
+### Installation
+```bash
+# Clone the repository
+git clone https://github.com/triscravello/tristan-portfolio-site.git
+
+# Navigate to project directory
+cd tristan-portfolio-site
+
+# Start development server
+npm start
+```
+
+### Available Scripts
+- `npm start` - Runs the app in development mode 
+- `npm run build` - Builds the app for production
+- `npm run deploy` - Deploys to a GitHub Pages
+
+## Deployment
+This site is automatically deployed to GitHub Pages using GitHub Actions when changes are pushed to the main branch. 
