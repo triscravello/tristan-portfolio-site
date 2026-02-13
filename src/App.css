@@ -11,3 +11,9 @@ body {
     width: 100%;
     margin: 0;
 }
+
+.app-overlay {
+    min-height: 100vh;
+    background: rgba(0, 0, 0, 0.55);
+    color:white 
+}
