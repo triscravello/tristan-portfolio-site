@@ -6,10 +6,19 @@ import Home from './pages/Home';
 import About from './pages/About';
 import Projects from './pages/Projects';
 import Contact from './pages/Contact';
+import backgroundImage from "./assets/background-image.webp";
 
 function App() {
+  const appStyle = {
+    backgroundImage: `url(${backgroundImage})`,
+    backgroundSize: 'cover',
+    backgroundPosition: 'center',
+    backgroundRepeat: 'no-repeat',
+    minHeight: '100vh'
+  }
+
   return (
-    <div>
+    <div style={appStyle}>
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />

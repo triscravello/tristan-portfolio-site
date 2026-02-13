@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { useEffect } from "react";
 import './Home.css';
+import profilePicture from "../assets/profile-picture.webp";
 
 function Home() {
     useEffect(() => {
@@ -9,6 +10,7 @@ function Home() {
     
     return (
         <main className="home">
+            <img src={profilePicture} alt="Tristan Cravello, Web Developer" fetchPriority="high" className="profile-pic" />
             <h1>Full-Stack Developer</h1>
             <p><em>Educator-turned-developer building human-centered web applications with the MERN stack and SQL.</em></p>
             <p>Open to opportunities in St. Petersburg, Tampa, and remote.</p>
