@@ -1,6 +1,11 @@
 import './About.css';
+import { useEffect } from 'react';
 
 function About () {
+    useEffect(() => {
+        document.title = 'About Me - Tristan Cravello';
+    }, []);
+    
     return (
         <main className='about'>
             <h1>About Me</h1>
