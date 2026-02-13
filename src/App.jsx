@@ -7,6 +7,7 @@ import About from './pages/About';
 import Projects from './pages/Projects';
 import Contact from './pages/Contact';
 import backgroundImage from "./assets/background-image.webp";
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
   const appStyle = {
