@@ -3,7 +3,7 @@
     padding: 40px 20px;
     margin: 0 auto;
     color: white;
-    background-color: #0f172a;
+    background-color: transparent;
     text-align: center;
 }
 
@@ -18,9 +18,16 @@
 }
 
 .contact-form {
-    width: 70%;
+    width: 90%;
     max-width: 800px;
     margin: 0 auto;
+    padding: 2rem;
+    background-color: rgba(15, 23, 42, 0.6);
+    border-radius: 12px;
+}
+
+.contact-form .mb-3 {
+    margin-bottom: 1.5rem !important;
 }
 
 .contact-form .form-label {
@@ -39,15 +46,38 @@
     color: #ccc;
 }
 
+.contact-form .form-control:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px #38bdf8; /* subtle blue glow */
+    background-color: #0f172a;
+}
+
 .submit-button {
-    background-color: black;
+    background-color: #0f172a;
+    border: 1px solid #334155;
     color: white;
     padding: 0.75rem 1.5rem;
     cursor: pointer;
-    border-radius: 5px;
+    border-radius: 8px;
     width: 60%;
     max-width: 300px;
     font-weight: bold;
     display: block;
-    margin: 1rem auto 0 auto; /* centers the button */
+    margin: 1rem auto 0 auto;
+    transition: all 0.2s ease-in-out;
+}
+
+.submit-button:hover {
+    background-color: #1e293b;
+    transform: translateY(-2px);
+}
+
+.submit-button:active {
+    transform: translateY(0);
+}
+
+.submit-button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    transform: none;
 }
