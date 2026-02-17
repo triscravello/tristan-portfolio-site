@@ -10,6 +10,9 @@ function ProjectCard({ project }) {
                     <em><strong>Status: </strong>{project.status}</em>
                 </p>
             )}
+            {project.image && (
+                <img src={project.image} alt={`Screenshot of ${project.title}`} className='project-image' loading='lazy' />
+            )}
             <p><strong>Description: </strong>{project.description}</p>
             <div className='tech-badges'>
                 {project.technologies.map((tech, index) => (
