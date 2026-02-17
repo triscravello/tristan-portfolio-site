@@ -5,15 +5,15 @@ import profilePicture from "../assets/profile-picture.webp";
 
 function Home() {
     useEffect(() => {
-        document.title = 'Tristan Cravello - Full Stack Developer';
+        document.title = 'Tristan Cravello | Full-Stack Developer';
     }, []);
     
     return (
         <main className="home">
             <img src={profilePicture} alt="Tristan Cravello, Web Developer" fetchPriority="high" className="profile-pic" />
             <h1>Full-Stack Developer</h1>
-            <p><em>Educator-turned-developer building human-centered web applications with MERN stack.</em></p>
-            <p>Open to opportunities in St. Petersburg, Tampa, and remote.</p>
+            <p><em>Educator-turned-developer building human-centered web applications with the MERN stack & SQL.</em></p>
+            <p>Based in St. Petersburg, FL | Open to remote opportunities</p>
             <div className="cta-buttons">
                 <Link to="/about" className="btn btn-secondary">About Me</Link>
                 <Link to="/projects" className="btn btn-secondary">View Projects</Link>
