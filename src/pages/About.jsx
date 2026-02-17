@@ -8,20 +8,63 @@ function About () {
     
     return (
         <main className='about'>
-            <h1>About Me</h1>
-            <p>
-                Passionate and motivated software developer with a strong foundation in problem solving, communication, and critical thinking, honed through 3 years of experience teaching middle school social studies. Recently transitioned into tech, combining a love for coding with an analytical mindset to build clean, efficient, and user-focused software solutions. Adept at learning new technologies quickly and collaborating effectively in team environments. Eager to contribute creativity and dedication to a forward-thinking development team.
-            </p>
-            <hr></hr>
-            <h2>Technical Skills</h2>
-            <ul>
-                <li><strong>Frontend: </strong> HTML, CSS, JavaScript, React, TypeScript, Tailwind</li>
-                <li><strong>Backend & Database: </strong>NodeJS, Express.js, Next.js, SQL, MongoDB</li>
-                <li><strong>Tools & Methodologies: </strong>Git, GitHub, ES6+, GraphQL, Data Structures & Algorithms</li>
-            </ul>
-            <hr></hr>
-            <h2>Hobbies & Interests</h2>
-            <p>In my free time, I enjoy running, reading, and listening to music. I'm a competitive runner, running race distances from the mile to the marathon. I also like to travel and occassionally go to theme parks.</p>
+            <section>
+                <h1>About Me</h1>
+                <p>
+                    Full-stack developer with a background in education, bringing strong communication, leadership, and problem-solving skills into software engineering. After three years teaching middle school social studies, I transitioned into tech and now build responsive, user-focused web applications using the MERN stack and SQL-based systems. I enjoy designing clean interfaces, structuring scalable backends, and continuously improving through iteration and feedback.
+                </p>
+            </section>
+            
+            <hr/>
+            <section>
+                <h2>Technical Skills</h2>
+
+                <h3>Frontend</h3>
+                <ul>
+                    <li>HTML5</li>
+                    <li>CSS3</li>
+                    <li>JavaScript (ES6+)</li>
+                    <li>React</li>
+                    <li>Tailwind CSS</li>
+                    <li>Bootstrap</li>
+                </ul>
+
+                <h3>Backend & Databases</h3>
+                <ul>
+                    <li>Node.js</li>
+                    <li>Express.js</li>
+                    <li>SQL (PostgreSQL / MySQL)</li>
+                    <li>MongoDB</li>
+                </ul>
+
+                <h3>Tools</h3>
+                <ul>
+                    <li>Git</li>
+                    <li>GitHub</li>
+                    <li>GraphQL</li>
+                    <li>REST APIs</li>
+                    <li>Data Structures & Algorithms</li>
+                </ul>
+            </section>
+            
+            <hr />
+            <section>
+                <h2>Currently Learning</h2>
+                <ul>
+                    <li>TypeScript</li>
+                    <li>Next.js</li>
+                    <li>Advanced React patterns</li>
+                    <li>System design fundamentals</li>
+                </ul>
+            </section>
+            
+            <hr/>
+            <section>
+                <h2>Hobbies & Interests</h2>
+                <p>
+                    Outside of development, I'm a competitive runner racing distances from the mile to the marathon. Training and racing have strengthened my discipline, consistency, and long-term goal setting — qualities I also bring to software development. I also enjoy reading, traveling, and occasionally visiting theme parks.
+                </p>
+            </section>
         </main>
     );
 }
