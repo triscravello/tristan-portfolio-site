@@ -3,12 +3,13 @@
 A personal portfolio website built with React showcasing my projects and experience.
 
 ## Live Demo
-Visit the live site:
+Visit the live site: [https://triscravello.github.io/tristan-portfolio-site/]
 
 ## Built With
 - React 19
 - React Router
 - CSS3
+- BootStrap 5
 
 ## Project Structure 
 - `/src/components` - Reusable React components (Navbar, Footer, and ProjectCard)
