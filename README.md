@@ -19,15 +19,36 @@ Visit the live site: [https://triscravello.github.io/tristan-portfolio-site/]
 
 ```
 ├── 📜 README.md
+├── 📁 dist
+│ ├── 📁 assets
+│ │ ├── 🖼️ ClassPulse-Cw8eHORq.webp
+│ │ ├── 🖼️ Pokedex-BxaiT0gN.webp
+│ │ ├── 🖼️ SpaceTravel-C9TXvIVv.webp
+│ │ ├── 🖼️ background-image-BMCnOaNV.webp
+│ │ ├── 🖼️ dog-api-postman-c0QQsy5k.webp
+│ │ ├── 🟨 index-BlM-auYv.js
+│ │ ├── 🎨 index-GMg6aIiO.css
+│ │ ├── 🖼️ portfolio-site-Vg82uBk2.webp
+│ │ ├── 🖼️ profile-picture-C28qEH1q.webp
+│ ├── 📁 images
+│ ├── 📄 index.html
 ├── 🟨 eslint.config.js
 ├── 📄 index.html
 ├── 🗂️ package-lock.json
 ├── 🗂️ package.json
 ├── 📁 public
+│ ├── 📁 images
 ├── 📁 src
 │ ├── 🎨 App.css
 │ ├── 🟦 App.jsx
 │ ├── 📁 assets
+│ │ ├── 🖼️ ClassPulse.webp
+│ │ ├── 🖼️ Pokedex.webp
+│ │ ├── 🖼️ SpaceTravel.webp
+│ │ ├── 🖼️ background-image.webp
+│ │ ├── 🖼️ dog-api-postman.webp
+│ │ ├── 🖼️ portfolio-site.webp
+│ │ ├── 🖼️ profile-picture.webp
 │ │ ├── 🖼️ react.svg
 │ ├── 📁 components
 │ │ ├── 🎨 Footer.css
