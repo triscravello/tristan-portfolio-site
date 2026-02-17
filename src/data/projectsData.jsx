@@ -1,9 +1,15 @@
 // src/data/projectsData.jsx
 // Project data for the portfolio's Projects page
+import ClassPulseImg from "../assets/ClassPulse.webp"
+import PortfolioImg from "../assets/portfolio-site.webp";
+import SpaceTravelImg from "../assets/SpaceTravel.webp";
+import PokedexImg from "../assets/Pokedex.webp";
+import DogApiImg from "../assets/dog-api-postman.webp";
+
 export const solo_projects = [
     {
         title: "ClassPulse",
-        image: "/images/ClassPulse.webp",
+        image: ClassPulseImg,
         description:"A full-stack classroom analytics platform that enables teachers to track student behavior, measure participation rates, and generate exportable performance reports.",
         architecture: "MERN stack application using RESTful API design with JWT authentication and protected routes",
         technologies: ["React", "Node.js", "Express", "JavaScript", "REST API", "CSS", "MongoDB", "JWT Authentication"],
@@ -24,7 +30,7 @@ export const solo_projects = [
     },
     {
         title: "Personal Portfolio",
-        image: "/images/portfolio-site.webp",
+        image: PortfolioImg,
         description: "A modern, responsive portfolio website showcasing full-stack development projects and technical skills.",
         architecture: "React SPA with component-based architecture and responsive design principles.",
         technologies: ["React", "HTML", "CSS", "JavaScript"],
@@ -41,11 +47,11 @@ export const solo_projects = [
         ],
         status: "Current",
         github: "https://github.com/triscravello/tristan-portfolio-site",
-        demo: null
+        demo: "https://triscravello.github.io/tristan-portfolio-site/"
     }, 
     {
         title: "Space Travel", 
-        image: "/images/SpaceTravel.webp",
+        image: SpaceTravelImg,
         description: "A React single-page application simulating an interplanetary evacuation experience with dynamic routing and state management.",
         architecture: "React SPA utilizing React Router, Context API, and mock API integration.",
         technologies: ["React", "React Router", "Mock REST API", "Context API", "State Management", "JavaScript", "Netlify"],
@@ -65,7 +71,7 @@ export const solo_projects = [
     },
     {
         title: "Pokedex",
-        image: "/images/Pokedex.webp",
+        image: PokedexImg,
         description: "A React application that generates two randomized Pokémon hands and determines a winner based on total experience points.",
         architecture: "Component-based React application utilizing props and state management.",
         technologies: ["React", "JavaScript", "HTML", "CSS"],
@@ -85,7 +91,7 @@ export const solo_projects = [
     },
     {
         title: "Dog Adoption API Platform",
-        image:"/images/dog-api-postman.webp",
+        image: DogApiImg,
         description: "A secure RESTful API with JWT authentication and protected routes. Direct endpoint access requires a valid Bearer token.",
         architecture: "Node.js + Express backend following MVC architecture with authentication middleware",
         technologies: ["Node.js", "Express", "MongoDB", "REST API", "Chai", "Supertest"],
