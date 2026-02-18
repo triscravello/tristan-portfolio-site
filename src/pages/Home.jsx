@@ -19,7 +19,7 @@ function Home() {
             <p>Based in St. Petersburg, FL | Open to remote opportunities</p>
             
             <div className="cta-buttons">
-                <a href={import.meta.env.BASE_URL + 'images/TristanCravello2026SoftwareEngineering.pdf'} target="_blank" rel="noopener noreferrer" className="btn btn-primary">View Resume</a>
+                <a href="/tristan-portfolio-site/images/TristanCravello2026SoftwareEngineering.pdf" target="_blank" rel="noopener noreferrer" className="btn btn-primary">View Resume</a>
                 
                 <Link to="/about" className="btn btn-secondary">About Me</Link>
                 
