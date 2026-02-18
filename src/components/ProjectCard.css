@@ -82,8 +82,11 @@
 }
 
 .project-highlights {
-    margin-top: 12px;
+    margin-top: 14px;
     text-align: left;
+    background-color: #f9fafb;
+    border-left: 4px solid #059559;
+    border-radius: 6px;
 }
 
 .project-highlights ul {
@@ -99,6 +102,27 @@
 }
 
 .project-highlights strong {
+    font-size: 0.9rem;
+}
+
+.project-features {
+    margin-top: 12px;
+    text-align: left;
+}
+
+.project-features ul {
+    padding-left: 18px;
+    margin-top: 6px;
+}
+
+.project-features li {
+    font-size: 0.85rem;
+    margin-bottom: 4px;
+    color: #374151;
+    line-height: 1.4;
+}
+
+.project-features strong {
     font-size: 0.9rem;
 }
 

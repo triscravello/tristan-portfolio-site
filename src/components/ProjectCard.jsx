@@ -54,6 +54,17 @@ function ProjectCard({ project }) {
                 </div>
             )}
 
+            {project.features && (
+                <div className="project-features">
+                    <strong>Features:</strong>
+                    <ul>
+                        {project.features.map((item) => (
+                            <li key={item}>{item}</li>
+                        ))}
+                    </ul>
+                </div>
+            )}
+
             <div className="project-links">
                 <a
                     className='github-link'
