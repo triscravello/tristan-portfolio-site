@@ -26,8 +26,8 @@ Visit the live site: [https://triscravello.github.io/tristan-portfolio-site/]
 │ │ ├── 🖼️ SpaceTravel-C9TXvIVv.webp
 │ │ ├── 🖼️ background-image-BMCnOaNV.webp
 │ │ ├── 🖼️ dog-api-postman-c0QQsy5k.webp
-│ │ ├── 🟨 index-BlM-auYv.js
-│ │ ├── 🎨 index-GMg6aIiO.css
+│ │ ├── 🎨 index-B9HtswgW.css
+│ │ ├── 🟨 index-ijy4KPPU.js
 │ │ ├── 🖼️ portfolio-site-Vg82uBk2.webp
 │ │ ├── 🖼️ profile-picture-C28qEH1q.webp
 │ ├── 📁 images
@@ -37,6 +37,7 @@ Visit the live site: [https://triscravello.github.io/tristan-portfolio-site/]
 ├── 🗂️ package-lock.json
 ├── 🗂️ package.json
 ├── 📁 public
+│ ├── 📄 TristanCravello2026SoftwareEngineering.pdf
 │ ├── 📁 images
 ├── 📁 src
 │ ├── 🎨 App.css
