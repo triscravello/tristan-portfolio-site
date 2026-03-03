@@ -72,13 +72,14 @@ export const solo_projects = [
     {
         title: "Pokedex",
         image: PokegameImg,
-        description: "A React application that generates two randomized Pokémon hands and determines a winner based on total experience points.",
-        architecture: "Component-based React application utilizing props and state management.",
+        description: "A interactive React game that generates two randomized Pokémon hands and determines a winner based on total experience points, featuring dynamic UI feedback and enhanced user interaction.",
+        architecture: "Component-based React application utilizing props, state management, and conditional rendering to power dynamic game logic and interactive UI behavior.",
         technologies: ["React", "JavaScript", "HTML", "CSS"],
         highlights: [
-            "Reusable card components",
-            "Randomized game logic implementation",
-            "State-driven UI updates"
+            "Implemented randomized game logic with conditional 'legendary roll' for enhanced gameplay",
+            "Added dynamic UI refresh functionality for re-generating game states",
+            "Enhanced UX with visible game instructions and personalized design system",
+            "Integrated hover-based micro-interactions for improved user engagement"
         ],
         features: [
             "Dynamic Pokemon generation",
