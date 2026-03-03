@@ -3,7 +3,7 @@
 import ClassPulseImg from "../assets/ClassPulse.webp"
 import PortfolioImg from "../assets/portfolio-site.webp";
 import SpaceTravelImg from "../assets/SpaceTravel.webp";
-import PokedexImg from "../assets/Pokedex.webp";
+import PokegameImg from "../assets/Pokegame.webp";
 import DogApiImg from "../assets/dog-api-postman.webp";
 
 export const solo_projects = [
@@ -71,7 +71,7 @@ export const solo_projects = [
     },
     {
         title: "Pokedex",
-        image: PokedexImg,
+        image: PokegameImg,
         description: "A React application that generates two randomized Pokémon hands and determines a winner based on total experience points.",
         architecture: "Component-based React application utilizing props and state management.",
         technologies: ["React", "JavaScript", "HTML", "CSS"],
@@ -87,7 +87,7 @@ export const solo_projects = [
         ],
         status: "Completed",
         github: "https://github.com/triscravello/React-Pokedex",
-        demo: "https://reactproppokedex.netlify.app/"
+        demo: "https://repokedexact.netlify.app/"
     },
     {
         title: "Dog Adoption API Platform",
