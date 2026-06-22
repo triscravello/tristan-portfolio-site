@@ -112,4 +112,87 @@ export const solo_projects = [
         demo: "https://dog-adoption-platform-api.onrender.com/",
         demoNote: "Protected API endpoints — requires JWT for access. Screenshot shows GET /dogs with Bearer token."
     }
-]
+];
+
+export const lab_projects = [
+    {
+        title: "AI-Powered RAG API",
+        image: null,
+        description: "Built a Retrieval-Augmented Generation API that retrieves relevant context from a vector database and returns AI-generated answers through a FastAPI endpoint.",
+        architecture: "FastAPI backend with vector search, semantic retrieval, and API testing through Swagger UI.",
+        technologies: ["Python", "FastAPI", "ChromaDB", "RAG", "Vector Search", "REST API"],
+        highlights: [
+            "Created an /ask endpoint for AI question answering",
+            "Connected retrieved context to generated responses",
+            "Tested API behavior through Swagger UI",
+            "Practiced backend AI application design"
+        ],
+        features: ["RAG Endpoint", "Context retrieval", "API testing"],
+        status: "Completed",
+        documentation: "https://learn.nextwork.org/intense_teal_innocent_alligator/docs/ai-devops-api",
+    },
+    {
+        title: "CI/CD Pipeline with GitHub Actions",
+        image: null,
+        description: "Configured an automated CI workflow that runs semantic tests to catch degraded RAG knowledge base content before deployment",
+        architecture: "GitHub Actions workflow running Python-based tests on repository changes.",
+        technologies: ["GitHub Actions", "Python", "CI/CD", "Semantic Testing"],
+        highlights: [
+            "Created a GitHub Actions workflow file",
+            "Automated semantic quality checks",
+            "Triggered CI through GitHub pushes",
+            "Used failing tests to catch degraded content"
+        ],
+        features: ["Automated testing", "CI workflow", "Failure detection"],
+        status: "Completed",
+        documentation: "https://learn.nextwork.org/intense_teal_innocent_alligator/docs/ai-devops-githubactions",
+    },
+    {
+        title: "Kubernetes Backend Deployment on Amazon EKS",
+        image: null,
+        description: "Deployed a backend application to a Kubernetes cluster using Amazon EKS, Docker, ECR, kubectl, and Kubernetes manifests",
+        architecture: "Containerized backend deployed to Amazon EKS using Deployment and Service manifests.",
+        technologies: ["AWS", "Amazon EKS", "Amazon ECR", "Docker", "Kubernetes", "kubectl"],
+        highlights: [
+            "Built and pushed a Docker image to Amazon ECR",
+            "Created Kubernetes Deployment and Service manifests",
+            "Deployed the backend application using kubectl",
+            "Verified the workload in the EKS console",
+        ],
+        features: ["Container deployment", "Kubernetes service exposure", "Cloud hosting"],
+        status: "Completed",
+        documentation: "https://learn.nextwork.org/intense_teal_innocent_alligator/docs/aws-compute-eks4"
+    },
+    {
+        title: "Dockerized Application Deployment",
+        image: null,
+        description: "Containerized a web application with Docker and deployed it to Amazon Elastic Beanstalk.",
+        architecture: "Docker-based deployment workflow using a custom container image and AWS Elastic Beanstalk.",
+        technologies: ["Docker", "AWS Elastic Beanstalk", "Nginx", "Cloud Deployment"],
+        highlights: [
+            "Built a custom Docker image",
+            "Ran the application locally in a container",
+            "Deployed the containerized app to AWS",
+            "Practiced production-style deployment concepts",
+        ],
+        features: ["Docker image", "Container runtime", "Cloud deployment"],
+        status: "Completed",
+        documentation: "https://learn.nextwork.org/intense_teal_innocent_alligator/docs/aws-compute-eb"
+    },
+    {
+        title: "Amazon Bedrock AI Chatbot",
+        image: null,
+        description: "Built a generative AI chatbot using Amazon Bedrock to practice prompt engineering and cloud-based AI application development.",
+        architecture: "AWS-based generative AI project using Amazon Bedrock for managed foundation model access.",
+        technologies: ["AWS", "Amazon Bedrock", "Generative AI", "Prompt Engineering"],
+        highlights: [
+            "Built a chatbot using Amazon Bedrock",
+            "Practiced prompt engineering concepts",
+            "Explored managed foundation model workflows",
+            "Connected cloud services to AI application behavior"
+        ],
+        features: ["AI chabot", "Prompt-based responses", "Cloud AI workflow"],
+        status: "Completed",
+        documentation: "https://learn.nextwork.org/intense_teal_innocent_alligator/docs/aws-genai-bedrock-chatbot"
+    }
+];
