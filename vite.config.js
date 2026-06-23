@@ -7,6 +7,6 @@ export default defineConfig(({ mode }) => {
 
   return {
     plugins: [react()],
-    base: isGithubPages ? '/tristan-portfolio-site' : '/',
+    base: isGithubPages ? '/tristan-portfolio-site/' : '/',
   }
 })
