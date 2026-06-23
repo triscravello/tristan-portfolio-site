@@ -1,5 +1,6 @@
 // src/data/projectsData.jsx
 // Project data for the portfolio's Projects page
+import RunLayerImg from "../assets/RunlayerDemo.webp";
 import ClassPulseImg from "../assets/ClassPulse.webp"
 import PortfolioImg from "../assets/portfolio-site.webp";
 import SpaceTravelImg from "../assets/SpaceTravel.webp";
@@ -15,6 +16,28 @@ import RAGFastAPIImg from "../assets/RAGFastAPI.webp";
 
 export const solo_projects = [
     {
+        title: "RunLayer",
+        image: RunLayerImg,
+        description: "A personalized running apparel recommendation platform that generates outfit recommendations based on weather conditions, workout type, and runner preferences.",
+        architecture: "Full-stack Next.js application with PostgreSQL, Prisma ORM, recommendation services, and weather-driven personalization.",
+        technologies: ["Next.js", "TypeScript", "PostgreSQL", "Prisma", "React", "Tailwind CSS", "REST API"],
+        highlights: [
+            "Built a recommendation engine that ranks apparel using weather and user preference data",
+            "Implemented personalized runner profiles and recommendation history",
+            "Designed a PostgreSQL schema with Prisma ORM",
+            "Created analytics dashboards showing recommendation and preference insights"
+        ],
+        features: [
+            "Personalized outfit recommendations",
+            "Weather-aware recommendations",
+            "Runner profiles",
+            "Recommendation history",
+            "Insights dashboard"
+        ],
+        status: "Active Development",
+        github: "https://github.com/triscravello/runlayer-app"
+    },
+    {
         title: "ClassPulse",
         image: ClassPulseImg,
         description:"A full-stack classroom analytics platform that enables teachers to track student behavior, measure participation rates, and generate exportable performance reports.",
@@ -23,7 +46,7 @@ export const solo_projects = [
         highlights: [
             "Implemented secure JWT-based authentication and route protection",
             "Designed normalized MongoDB schemas to support scalable behavior logging and report generation",
-            "Built real-time partcipation analytics dashboards using aggregated MongoDB queries",
+            "Built real-time participation analytics dashboards using aggregated MongoDB queries",
             "Structured backend using MVC architecture"
         ],
         features: [
@@ -168,6 +191,7 @@ export const lab_projects = [
         ],
         features: ["Automated testing", "CI workflow", "Failure detection"],
         status: "Completed",
+        github: "https://github.com/triscravello/nextwork-rag-api",
         documentation: "https://learn.nextwork.org/intense_teal_innocent_alligator/docs/ai-devops-githubactions",
     },
     {
