@@ -21,7 +21,7 @@ function Home() {
             <p className="tech-stack">React • Next.js • TypeScript • Node.js • PostgreSQL • AWS • Docker • Kubernetes</p>
             
             <div className="cta-buttons">
-                <a href="/tristan-portfolio-site/images/TristanCravello2026SoftwareEngineering.pdf" target="_blank" rel="noopener noreferrer" className="btn btn-primary">View Resume</a>
+                <a href={`${import.meta.env.BASE_URL}images/TristanCravelloSWEResume2026.pdf`} target="_blank" rel="noopener noreferrer" className="btn btn-primary">View Resume</a>
                 
                 <Link to="/about" className="btn btn-secondary">About Me</Link>
                 
