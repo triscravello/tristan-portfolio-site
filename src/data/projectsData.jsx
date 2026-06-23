@@ -6,6 +6,13 @@ import SpaceTravelImg from "../assets/SpaceTravel.webp";
 import PokegameImg from "../assets/Pokegame.webp";
 import DogApiImg from "../assets/dog-api-postman.webp";
 
+import AmazonBedrockChatbotImg from "../assets/AmazonBedrockChatbot.webp";
+import DeployEKSImg from "../assets/DeployEKS.webp";
+import DockerDesktopImg from "../assets/DockerDesktop.webp";
+import GitHubActionTestFlowImg from "../assets/GitHubActionTestFlow.webp";
+import RAGDeployKubeImg from "../assets/RAGDeployKube.webp";
+import RAGFastAPIImg from "../assets/RAGFastAPI.webp";
+
 export const solo_projects = [
     {
         title: "ClassPulse",
@@ -117,7 +124,7 @@ export const solo_projects = [
 export const lab_projects = [
     {
         title: "AI-Powered RAG API",
-        image: null,
+        image: RAGFastAPIImg,
         description: "Built a Retrieval-Augmented Generation API that retrieves relevant context from a vector database and returns AI-generated answers through a FastAPI endpoint.",
         architecture: "FastAPI backend with vector search, semantic retrieval, and API testing through Swagger UI.",
         technologies: ["Python", "FastAPI", "ChromaDB", "RAG", "Vector Search", "REST API"],
@@ -133,7 +140,7 @@ export const lab_projects = [
     },
     {
         title: "RAG API Deployment with Kubernetes",
-        image: null,
+        image: RAGDeployKubeImg,
         description: "Deployed a containerized RAG API to a local Kubernetes cluster using Deployment and Service manifests",
         architecture: "FastAPI RAG API containerized with Docker and deployed through Kubernetes manifests.",
         technologies: ["Python", "FastAPI", "Docker", "Kubernetes", "kubectl", "NodePort"],
@@ -149,7 +156,7 @@ export const lab_projects = [
     },
     {
         title: "CI/CD Pipeline with GitHub Actions",
-        image: null,
+        image: GitHubActionTestFlowImg,
         description: "Configured an automated CI workflow that runs semantic tests to catch degraded RAG knowledge base content before deployment",
         architecture: "GitHub Actions workflow running Python-based tests on repository changes.",
         technologies: ["GitHub Actions", "Python", "CI/CD", "Semantic Testing"],
@@ -165,7 +172,7 @@ export const lab_projects = [
     },
     {
         title: "Kubernetes Backend Deployment on Amazon EKS",
-        image: null,
+        image: DeployEKSImg,
         description: "Deployed a backend application to a Kubernetes cluster using Amazon EKS, Docker, ECR, kubectl, and Kubernetes manifests",
         architecture: "Containerized backend deployed to Amazon EKS using Deployment and Service manifests.",
         technologies: ["AWS", "Amazon EKS", "Amazon ECR", "Docker", "Kubernetes", "kubectl"],
@@ -181,7 +188,7 @@ export const lab_projects = [
     },
     {
         title: "Dockerized Application Deployment",
-        image: null,
+        image: DockerDesktopImg,
         description: "Containerized a web application with Docker and deployed it to Amazon Elastic Beanstalk.",
         architecture: "Docker-based deployment workflow using a custom container image and AWS Elastic Beanstalk.",
         technologies: ["Docker", "AWS Elastic Beanstalk", "Nginx", "Cloud Deployment"],
@@ -197,7 +204,7 @@ export const lab_projects = [
     },
     {
         title: "Amazon Bedrock AI Chatbot",
-        image: null,
+        image: AmazonBedrockChatbotImg,
         description: "Built a generative AI chatbot using Amazon Bedrock to practice prompt engineering and cloud-based AI application development.",
         architecture: "AWS-based generative AI project using Amazon Bedrock for managed foundation model access.",
         technologies: ["AWS", "Amazon Bedrock", "Generative AI", "Prompt Engineering"],
