@@ -5,18 +5,20 @@ import profilePicture from "../assets/profile-picture.webp";
 
 function Home() {
     useEffect(() => {
-        document.title = 'Tristan Cravello | Full-Stack Developer';
+        document.title = 'Tristan Cravello | Full-Stack Software Engineer';
     }, []);
     
     return (
         <main className="home">
             <img src={profilePicture} alt="Tristan Cravello, Web Developer" fetchPriority="high" className="profile-pic" />
             
-            <h1>Full-Stack Developer</h1>
+            <h1>Full-Stack Software Engineer</h1>
             
-            <p><em>Educator-turned-developer building human-centered web applications with the MERN stack & SQL.</em></p>
+            <p><em>Educator-turned-software engineer building full-stack applications, cloud solutions, and AI-powered systems.</em></p>
             
             <p>Based in St. Petersburg, FL | Open to remote opportunities</p>
+
+            <p className="tech-stack">React • Next.js • TypeScript • Node.js • PostgreSQL • AWS • Docker • Kubernetes</p>
             
             <div className="cta-buttons">
                 <a href="/tristan-portfolio-site/images/TristanCravello2026SoftwareEngineering.pdf" target="_blank" rel="noopener noreferrer" className="btn btn-primary">View Resume</a>
@@ -27,6 +29,16 @@ function Home() {
                 
                 <Link to="/contact" className="btn btn-secondary">Get In Touch</Link>
             </div>
+
+            <section className="featured-projects">
+                <h2>Featured Projects</h2>
+
+                <ul>
+                    <li>RunLayer — Personalized running apparel recommendations</li>
+                    <li>ClassPulse — Classroom analytics platform</li>
+                    <li>AI-Powered RAG API — FastAPI + vector search</li>
+                </ul>
+            </section>
         </main>
     );
 }

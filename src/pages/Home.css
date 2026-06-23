@@ -28,12 +28,19 @@
     margin-bottom: 0.75rem;
 }
 
+.home p.tech-stack {
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    margin-top: 0.5rem;
+}
+
 .profile-pic {
     border-radius: 50%;
     width: 220px;
     height: 220px;
     object-fit: cover;
     margin-bottom: 20px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
 }
 
 .cta-buttons {
@@ -47,6 +54,7 @@
 .btn {
     padding: 12px 24px;
     font-weight: bold;
+    transition: all 0.2s ease;
 }
 
 .btn-primary {
@@ -67,4 +75,33 @@
 
 .btn:hover {
     background-color: #5a6268;
+    transform: translateY(-2px);
+}
+
+/* Featured Projects */
+.featured-projects {
+    margin-top: 3rem;
+    max-width: 700px;
+    width: 100%;
+}
+
+.featured-projects ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.featured-projects li {
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 12px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    color: white;
+    text-align: left;
+    backdrop-filter: blur(10px);
+}
+
+.featured-projects h2 {
+    margin-bottom: 1.5rem;
 }
