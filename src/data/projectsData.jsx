@@ -132,6 +132,22 @@ export const lab_projects = [
         documentation: "https://learn.nextwork.org/intense_teal_innocent_alligator/docs/ai-devops-api",
     },
     {
+        title: "RAG API Deployment with Kubernetes",
+        image: null,
+        description: "Deployed a containerized RAG API to a local Kubernetes cluster using Deployment and Service manifests",
+        architecture: "FastAPI RAG API containerized with Docker and deployed through Kubernetes manifests.",
+        technologies: ["Python", "FastAPI", "Docker", "Kubernetes", "kubectl", "NodePort"],
+        highlights: [
+            "Containerized a FastAPI RAG API",
+            "Created Kubernetes Deployment and Service manifests",
+            "Exposed the API using a NodePort Service",
+            "Tested request flow from local machine to Kubernetes pod"
+        ],
+        features: ["Container orchestration", "Service exposure", "API testing"],
+        status: "Completed",
+        documentation: "https://nextwork.ai/intense_teal_innocent_alligator/docs/ai-devops-kubernetes",
+    },
+    {
         title: "CI/CD Pipeline with GitHub Actions",
         image: null,
         description: "Configured an automated CI workflow that runs semantic tests to catch degraded RAG knowledge base content before deployment",
