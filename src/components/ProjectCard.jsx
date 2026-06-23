@@ -66,15 +66,17 @@ function ProjectCard({ project }) {
             )}
 
             <div className="project-links">
-                <a
-                    className='github-link'
-                    href={project.github}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label={`View ${project.title} source code on GitHub`}
-                >
-                    View Code
-                </a>
+                {project.github && (
+                    <a
+                        className='github-link'
+                        href={project.github}
+                        target='_blank'
+                        rel='noopener noreferrer'
+                        aria-label={`View ${project.title} source code on Github`}
+                    >
+                        View Code
+                    </a>
+                )}
 
                 {project.demo && (
                     <a
@@ -85,6 +87,18 @@ function ProjectCard({ project }) {
                         aria-label={`View ${project.title} live demo`}
                     >
                         Live Demo
+                    </a>
+                )}
+
+                {project.documentation && (
+                    <a
+                        className='documentation-link'
+                        href={project.documentation}
+                        target='_blank'
+                        rel='noopener noreferrer'
+                        aria-label={`View ${project.title} project documentation`}
+                    >
+                        Documentation
                     </a>
                 )}
             </div>

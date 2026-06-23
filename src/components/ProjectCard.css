@@ -15,14 +15,15 @@
 }
 
 .project-card .github-link,
-.project-card .live-site-link {
+.project-card .live-site-link,
+.project-card .documentation-link {
     text-decoration: none;
     font-weight: 600;
     padding: 8px 14px;
     border-radius: 20px;
     display: inline-block;
     margin: 8px 4px 0 0;
-    transition: background-color 0.2s ease;
+    transition: background-color 0.2s ease, transform 0.2s ease;
 }
 
 .project-card .github-link {
@@ -41,6 +42,15 @@
 
 .project-card .live-site-link:hover {
     background-color: #1d4ed8;
+}
+
+.project-card .documentation-link {
+    color: white;
+    background-color: #7c3aed;
+}
+
+.project-card .documentation-link:hover {
+    background-color: #6d28d9;
 }
 
 .project-card h3 {
@@ -87,6 +97,7 @@
     background-color: #f9fafb;
     border-left: 4px solid #059559;
     border-radius: 6px;
+    padding: 8px 12px;
 }
 
 .project-highlights ul {
