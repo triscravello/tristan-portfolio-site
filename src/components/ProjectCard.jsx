@@ -23,9 +23,11 @@ function ProjectCard({ project }) {
                 />
             )}
 
-            <p>
-                <strong>Description:</strong> {project.description}
-            </p>
+            {project.description && (
+                <p>
+                    <strong>Description:</strong> {project.description}
+                </p>
+            )}
 
             {project.architecture && (
                 <p className="project-architecture">

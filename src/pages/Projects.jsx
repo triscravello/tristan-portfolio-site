@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import './Projects.css';
 import ProjectCard from "../components/ProjectCard";
-import { solo_projects, lab_projects } from "../data/projectsData";
+import { solo_projects, lab_projects, data_projects } from "../data/projectsData";
 
 function Projects() {
     useEffect(() => {
@@ -25,12 +25,26 @@ function Projects() {
                 <h2>Cloud, AI & DevOps Labs</h2>
 
                 <p className="section-description">
-                    Hands-on cloud, AI, containerization, Kubernetes, and CI/CD projects completed through NextWork
+                    Hands-on cloud infrastructure, AI, containerization, Kubernetes, and CI/CD projects completed through NextWork
                 </p>
 
                 <div className="projects-grid">
                     {lab_projects.map((project, index) => (
                         <ProjectCard key={`lab-${index}`} project={project} />
+                    ))}
+                </div>
+            </section>
+
+            <section className="data-projects">
+                <h2>Data Engineering & Analytics Labs</h2>
+
+                <p className="section-description">
+                    Hands-on data engineering, analytics engineering, visualization, and AI-assisted workflows completed through NextWork
+                </p>
+
+                <div className="projects-grid">
+                    {data_projects.map((project, index) => (
+                        <ProjectCard key={`data-${index}`} project={project} />
                     ))}
                 </div>
             </section>
