@@ -10,7 +10,7 @@ function Home() {
     
     return (
         <main className="home">
-            <img src={profilePicture} alt="Tristan Cravello, Web Developer" fetchPriority="high" className="profile-pic" />
+            <img src={profilePicture} alt="Tristan Cravello, full-stack software engineer" fetchPriority="high" className="profile-pic" />
             
             <h1>Full-Stack Software Engineer</h1>
             
@@ -18,7 +18,7 @@ function Home() {
             
             <p>Based in St. Petersburg, FL | Open to remote opportunities</p>
 
-            <p className="tech-stack">React • Next.js • TypeScript • Node.js • PostgreSQL • AWS • Docker • Kubernetes</p>
+            <p className="tech-stack">React • Next.js • TypeScript • Node.js • PostgreSQL • AWS • Docker • Kubernetes • dbt • Grafana</p>
             
             <div className="cta-buttons">
                 <a href={`${import.meta.env.BASE_URL}images/TristanCravelloSWEResume2026.pdf`} target="_blank" rel="noopener noreferrer" className="btn btn-primary">View Resume</a>
