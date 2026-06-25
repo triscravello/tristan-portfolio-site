@@ -14,6 +14,11 @@ import GitHubActionTestFlowImg from "../assets/GitHubActionTestFlow.webp";
 import RAGDeployKubeImg from "../assets/RAGDeployKube.webp";
 import RAGFastAPIImg from "../assets/RAGFastAPI.webp";
 
+import DbtMCPImg from "../assets/DbtMCP.webp";
+import GrafanaImg from "../assets/Grafana.webp";
+import JupyterMCPImg from "../assets/JupyterMCP.webp";
+import PostgresDockerMCPImg from "../assets/PostgresDockerMCP.webp";
+
 export const solo_projects = [
     {
         title: "RunLayer",
@@ -238,8 +243,90 @@ export const lab_projects = [
             "Explored managed foundation model workflows",
             "Connected cloud services to AI application behavior"
         ],
-        features: ["AI chabot", "Prompt-based responses", "Cloud AI workflow"],
+        features: ["AI chatbot", "Prompt-based responses", "Cloud AI workflow"],
         status: "Completed",
         documentation: "https://learn.nextwork.org/intense_teal_innocent_alligator/docs/aws-genai-bedrock-chatbot"
+    }
+];
+
+export const data_projects = [
+    {
+        title: "Data Engineering with PostgreSQL & Docker MCP",
+        image: PostgresDockerMCPImg,
+        description: "Built a PostgreSQL data environment with Docker and managed it through Docker MCP, exploring AI-assisted database workflows and relational data modeling.",
+        architecture: "Containerized PostgreSQL database managed with Docker and MCP tooling.",
+        technologies: ["PostgreSQL", "Docker", "MCP", "SQL"],
+        highlights: [
+            "Provisioned a PostgreSQL database with Docker",
+            "Explored relational database design",
+            "Used Docker MCP to interact with the database",
+            "Verified schemas and relationships"
+        ],
+        features: [
+            "Containerized database",
+            "Relational data modeling",
+            "AI-assisted database workflows"
+        ],
+        status: "Completed",
+        documentation: "https://nextwork.ai/intense_teal_innocent_alligator/docs/mcp-data-engineer1"
+    },
+    {
+        title: "Analytics Engineering with dbt MCP",
+        image: DbtMCPImg,
+        description: "Built and tested analytics models using dbt, applying transformations and automated data quality checks to create reliable analytics workflows.",
+        architecture: "dbt project with SQL transformations, models, and automated tests",
+        technologies: ["dbt", "SQL", "PostgreSQL", "MCP"],
+        highlights: [
+            "Built reusable dbt models",
+            "Added automated data quality tests",
+            "Validated transformed datasets",
+            "Practiced analytics engineering workflows"
+        ],
+        features: [
+            "Data transformations",
+            "Automated testing",
+            "Analytics-ready models"
+        ],
+        status: "Completed",
+        documentation: "https://nextwork.ai/intense_teal_innocent_alligator/docs/mcp-data-engineer2"
+    },
+    {
+        title: "Data Analysis with Jupyter MCP",
+        image: JupyterMCPImg,
+        description: "Performed exploratory data analysis using Jupyter notebooks, generating insights and visualizations with Python libraries",
+        architecture: "Notebook-based daya analysis workflow using Jupyter and MCP.",
+        technologies: ["Jupyter", "Python", "Pandas", "Matplotlib", "MCP"],
+        highlights: [
+            "Queried and analyzed structured datasets",
+            "Created visualizations with Matplotlib",
+            "Used Jupyter MCP to streamline workflows",
+        ],
+        features: [
+            "Interactive notebooks",
+            "Data visualization",
+            "Exploratory analysis"
+        ],
+        status: "Completed",
+        documentation: "https://nextwork.ai/intense_teal_innocent_alligator/docs/mcp-data-engineer3"
+    },
+    {
+        title: "Data Visualization with Grafana",
+        image: GrafanaImg,
+        description: "Built interactive dashboards in Grafana using PostgreSQL data to visualize business metrics and monitor trends.",
+        architecture: "Grafana dashboards connected to PostgreSQL for real-time visualization.",
+        technologies: ["Grafana", "PostgreSQL", "SQL"],
+        highlights: [
+            "Connected Grafana to PostgreSQL",
+            "Created KPI dashboards",
+            "Built charts for trends and business metrics",
+            "Practiced observability and visualization concepts"
+        ],
+        features: [
+            "Interactive dashboards",
+            "Business metrics",
+            "Real-time visualization"
+        ],
+        status: "Completed",
+        documentation: "https://nextwork.ai/intense_teal_innocent_alligator/docs/mcp-data-engineer4"
     }
 ];
