@@ -8,9 +8,9 @@ import PokegameImg from "../assets/Pokegame.webp";
 import DogApiImg from "../assets/dog-api-postman.webp";
 
 import AmazonBedrockChatbotImg from "../assets/AmazonBedrockChatbot.webp";
-import DeployEKSImg from "../assets/DeployEKS.webp";
-import DockerDesktopImg from "../assets/DockerDesktop.webp";
-import GitHubActionTestFlowImg from "../assets/GitHubActionTestFlow.webp";
+import DeployNextjstoEKSImg from "../assets/DeployNextjstoEKS.webp";
+import ContainerizeNextwithECRImg from "../assets/ContainerizeNextwithECR.webp";
+import AutomateCICDforEKSImg from "../assets/AutomateCICDforEKS.webp";
 import RAGDeployKubeImg from "../assets/RAGDeployKube.webp";
 import RAGFastAPIImg from "../assets/RAGFastAPI.webp";
 
@@ -25,12 +25,13 @@ export const solo_projects = [
         image: RunLayerImg,
         description: "A personalized running apparel recommendation platform that generates outfit recommendations based on weather conditions, workout type, and runner preferences.",
         architecture: "Full-stack Next.js application with PostgreSQL, Prisma ORM, recommendation services, and weather-driven personalization.",
-        technologies: ["Next.js", "TypeScript", "PostgreSQL", "Prisma", "React", "Tailwind CSS", "REST API"],
+        technologies: ["Next.js", "TypeScript", "PostgreSQL", "Prisma ORM", "Redis", "Upstash Redis", "Tailwind CSS", "REST API"],
         highlights: [
             "Built a recommendation engine that ranks apparel using weather and user preference data",
             "Implemented personalized runner profiles and recommendation history",
             "Designed a PostgreSQL schema with Prisma ORM",
-            "Created analytics dashboards showing recommendation and preference insights"
+            "Created analytics dashboards showing recommendation and preference insights",
+            "Implemented distributed Redis-backed rate limiting with fixed-window algorithms to protect production API endpoints."
         ],
         features: [
             "Personalized outfit recommendations",
@@ -183,53 +184,60 @@ export const lab_projects = [
         documentation: "https://nextwork.ai/intense_teal_innocent_alligator/docs/ai-devops-kubernetes",
     },
     {
-        title: "CI/CD Pipeline with GitHub Actions",
-        image: GitHubActionTestFlowImg,
-        description: "Configured an automated CI workflow that runs semantic tests to catch degraded RAG knowledge base content before deployment",
-        architecture: "GitHub Actions workflow running Python-based tests on repository changes.",
-        technologies: ["GitHub Actions", "Python", "CI/CD", "Semantic Testing"],
+        title: "Next.js Application Deployment on Amazon EKS",
+        image: DeployNextjstoEKSImg,
+        description: "Deployed a containerized Next.js application to Amazon EKS using Docker, Amazon ECR, kubectl, and Kubernetes manifests.",
+        architecture: "Next.js application containerized with Docker, pushed to Amazon ECR, and deployed to Amazon EKS using Kubernetes Deployment and Service manifests.",
+        technologies: ["AWS", "Amazon EKS", "Amazon ECR", "Docker", "Kubernetes", "kubectl", "Next.js"],
         highlights: [
-            "Created a GitHub Actions workflow file",
-            "Automated semantic quality checks",
-            "Triggered CI through GitHub pushes",
-            "Used failing tests to catch degraded content"
-        ],
-        features: ["Automated testing", "CI workflow", "Failure detection"],
-        status: "Completed",
-        github: "https://github.com/triscravello/nextwork-rag-api",
-        documentation: "https://learn.nextwork.org/intense_teal_innocent_alligator/docs/ai-devops-githubactions",
-    },
-    {
-        title: "Kubernetes Backend Deployment on Amazon EKS",
-        image: DeployEKSImg,
-        description: "Deployed a backend application to a Kubernetes cluster using Amazon EKS, Docker, ECR, kubectl, and Kubernetes manifests",
-        architecture: "Containerized backend deployed to Amazon EKS using Deployment and Service manifests.",
-        technologies: ["AWS", "Amazon EKS", "Amazon ECR", "Docker", "Kubernetes", "kubectl"],
-        highlights: [
-            "Built and pushed a Docker image to Amazon ECR",
+            "Built and pushed a Next.js Docker image to Amazon ECR",
             "Created Kubernetes Deployment and Service manifests",
-            "Deployed the backend application using kubectl",
-            "Verified the workload in the EKS console",
+            "Deployed the application to an Amazon EKS cluster",
+            "Verified pods, services, and workload status with kubectl and the EKS console"
         ],
-        features: ["Container deployment", "Kubernetes service exposure", "Cloud hosting"],
+        features: [
+            "Containerized Next.js app", 
+            "Kubernetes deployment", 
+            "Cloud-hosted workload"
+        ],
         status: "Completed",
-        documentation: "https://learn.nextwork.org/intense_teal_innocent_alligator/docs/aws-compute-eks4"
+        documentation: "https://nextwork.ai/intense_teal_innocent_alligator/docs/2a469dba-2377-4301-b590-d12e014b4221"
     },
     {
-        title: "Dockerized Application Deployment",
-        image: DockerDesktopImg,
-        description: "Containerized a web application with Docker and deployed it to Amazon Elastic Beanstalk.",
-        architecture: "Docker-based deployment workflow using a custom container image and AWS Elastic Beanstalk.",
-        technologies: ["Docker", "AWS Elastic Beanstalk", "Nginx", "Cloud Deployment"],
+        title: "Containerizing a Next.js App with Docker & Amazon ECR",
+        image: ContainerizeNextwithECRImg,
+        description: "Containerized a Next.js application with Docker and pushed the image to Amazon Elastic Container Registry.",
+        architecture: "Docker-based build workflow using a production Dockerfile, local container testing, and Amazon ECR as a private image registry.",
+        technologies: ["Next.js", "Docker", "Amazon ECR", "AWS", "Containerization"],
         highlights: [
-            "Built a custom Docker image",
-            "Ran the application locally in a container",
-            "Deployed the containerized app to AWS",
-            "Practiced production-style deployment concepts",
+            "Created a production-ready Docker image for a Next.js application",
+            "Tested the container locally before deployment",
+            "Tagged and pushed the image to Amazon ECR",
+            "Practiced container registry workflows used in cloud deployments"
         ],
-        features: ["Docker image", "Container runtime", "Cloud deployment"],
+        features: [
+            "Docker image build", 
+            "Local container testing", 
+            "Private container registry"
+        ],
         status: "Completed",
-        documentation: "https://learn.nextwork.org/intense_teal_innocent_alligator/docs/aws-compute-eb"
+        documentation: "https://nextwork.ai/intense_teal_innocent_alligator/docs/a57d517a-5bc9-4424-a0ea-be0028f374b2"
+    },
+    {
+        title: "CI/CD Deployment Pipeline for Amazon EKS",
+        image: AutomateCICDforEKSImg,
+        description: "Automated build, push, and deployment workflows for an Amazon EKS application using GitHub Actions.",
+        architecture: "GitHub Actions pipeline using OIDC authentication, Docker image build, Amazon ECR, kubectl, and Kubernetes rollout verification.",
+        technologies: ["GitHub Actions", "AWS", "Amazon EKS", "Amazon ECR", "Docker", "Kubernetes", "OIDC", "CI/CD"],
+        highlights: [
+            "Configured GitHub Actions to build and push Docker images",
+            "Used OIDC for secure AWS authentication without long-lived credentials",
+            "Automated Kubernetes deployments to Amazon EKS",
+            "Tested failure handling and rollback behavior"
+        ],
+        features: ["Automated deployment", "OIDC authentication", "Rollback verification"],
+        status: "Completed",
+        documentation: "https://nextwork.ai/intense_teal_innocent_alligator/docs/526faeec-70b7-42e6-8eb0-c4e222940bce"
     },
     {
         title: "Amazon Bedrock AI Chatbot",
@@ -294,7 +302,7 @@ export const data_projects = [
         title: "Data Analysis with Jupyter MCP",
         image: JupyterMCPImg,
         description: "Performed exploratory data analysis using Jupyter notebooks, generating insights and visualizations with Python libraries",
-        architecture: "Notebook-based daya analysis workflow using Jupyter and MCP.",
+        architecture: "Notebook-based data analysis workflow using Jupyter and MCP.",
         technologies: ["Jupyter", "Python", "Pandas", "Matplotlib", "MCP"],
         highlights: [
             "Queried and analyzed structured datasets",
