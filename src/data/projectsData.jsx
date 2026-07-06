@@ -6,6 +6,7 @@ import PortfolioImg from "../assets/portfolio-site.webp";
 import SpaceTravelImg from "../assets/SpaceTravel.webp";
 import PokegameImg from "../assets/Pokegame.webp";
 import DogApiImg from "../assets/dog-api-postman.webp";
+import HeatRiskAlertImg from "../assets/HeatRiskAlert.webp";
 
 import AmazonBedrockChatbotImg from "../assets/AmazonBedrockChatbot.webp";
 import DeployNextjstoEKSImg from "../assets/DeployNextjstoEKS.webp";
@@ -44,6 +45,28 @@ export const solo_projects = [
         github: "https://github.com/triscravello/runlayer-app"
     },
     {
+        title: "FIFA World Cup Heat Risk Alert System",
+        image: HeatRiskAlertImg,
+        description: "A cloud-based alert system that monitors FIFA World Cup host city weather condition and generates heat risk alerts with AI-powered safety briefings",
+        architecture: "Serverless AWS workflow using scheduled checks, weather data, risk scoring, and AI-generated safety summaries",
+        technologies: ["AWS, Amazon Bedrock", "Open-Meteo API", "AWS Lambda", "Python", "Automation"],
+        highlights: [
+            "Built a heat risk scoring workflow for World Cup host cities",
+            "Generated AI-powered safety briefings with Amazon Bedrock",
+            "Automated weather checks and alert logic",
+            "Designed a real-world public safety use case around sports and climate risk"
+        ],
+        features: [
+            "Heat risk alerts",
+            "Host city weather monitoring",
+            "AI safety briefings",
+            "Automated alert workflow"
+        ],
+        status: "Completed",
+        github: "https://github.com/triscravello/fifa-world-cup-heat-risk-monitor",
+        demo: "http://worldcup-heat-alerts-593489476440.s3-website-us-east-1.amazonaws.com/"
+    },
+    {
         title: "ClassPulse",
         image: ClassPulseImg,
         description:"A full-stack classroom analytics platform that enables teachers to track student behavior, measure participation rates, and generate exportable performance reports.",
@@ -60,7 +83,7 @@ export const solo_projects = [
             "Student-level participation tracking",
             "Exportable reports"
         ],
-        status: "In Progress",
+        status: "Completed",
         github: "https://github.com/triscravello/ClassPulse",
         demo: "https://class-pulse-henna.vercel.app/"
     },
