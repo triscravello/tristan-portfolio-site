@@ -1,19 +1,21 @@
 // src/data/projectsData.jsx
 // Project data for the portfolio's Projects page
 import RunLayerImg from "../assets/RunlayerDemo.webp";
+import ThreatEventPlatformImg from "../assets/ThreatEventPlatform.webp";
 import ClassPulseImg from "../assets/ClassPulse.webp"
 import PortfolioImg from "../assets/portfolio-site.webp";
-import SpaceTravelImg from "../assets/SpaceTravel.webp";
 import PokegameImg from "../assets/Pokegame.webp";
 import DogApiImg from "../assets/dog-api-postman.webp";
 import HeatRiskAlertImg from "../assets/HeatRiskAlert.webp";
 
-import AmazonBedrockChatbotImg from "../assets/AmazonBedrockChatbot.webp";
+import WorldCupDashboardImg from "../assets/WorldCupDashboard.webp";
 import DeployNextjstoEKSImg from "../assets/DeployNextjstoEKS.webp";
 import ContainerizeNextwithECRImg from "../assets/ContainerizeNextwithECR.webp";
 import AutomateCICDforEKSImg from "../assets/AutomateCICDforEKS.webp";
 import RAGDeployKubeImg from "../assets/RAGDeployKube.webp";
 import RAGFastAPIImg from "../assets/RAGFastAPI.webp";
+import SecureSecretsManagerImg from "../assets/SecureSecretsManager.webp";
+import AWSSecurityMonitoringImg from "../assets/AWSSecurityMonitoring.webp";
 
 import DbtMCPImg from "../assets/DbtMCP.webp";
 import GrafanaImg from "../assets/Grafana.webp";
@@ -25,7 +27,7 @@ export const solo_projects = [
         title: "RunLayer",
         image: RunLayerImg,
         description: "A personalized running apparel recommendation platform that generates outfit recommendations based on weather conditions, workout type, and runner preferences.",
-        architecture: "Full-stack Next.js application with PostgreSQL, Prisma ORM, recommendation services, and weather-driven personalization.",
+        architecture: "Full-stack Next.js application with PostgreSQL, Prisma ORM, Redis-backed rate limiting, weather integration, and a personalized recommendation engine.",
         technologies: ["Next.js", "TypeScript", "PostgreSQL", "Prisma ORM", "Redis", "Upstash Redis", "Tailwind CSS", "REST API"],
         highlights: [
             "Built a recommendation engine that ranks apparel using weather and user preference data",
@@ -45,11 +47,34 @@ export const solo_projects = [
         github: "https://github.com/triscravello/runlayer-app"
     },
     {
+        title: "Threat Event Platform",
+        image: ThreatEventPlatformImg,
+        description: "A production-oriented threat event API with containerized deployment, automated CI/CD, secure cloud authentication, health monitoring, and rollback workflows.",
+        architecture: "Spring Boot application containerized with Docker and deployed to Amazon ECS Fargate through GitHub Actions, Amazon ECR, an Application Load Balancer, AWS Secrets Manager, and CloudWatch.",
+        technologies: ["Java", "Spring Boot", "Maven", "Docker", "GitHub Actions", "AWS", "Amazon ECS", "AWS Fargate", "Amazon ECR", "OIDC", "AWS Secrets Manager", "OIDC"],
+        highlights: [
+            "Built a Spring Boot API for ingesting and processing threat evens",
+            "Automated testing, Docker image builds, ECR publishing, and ECS deployment with GitHub Actions",
+            "Used GitHub OIDC authentication to avoid storing long-lived AWS credentials",
+            "Configured application health checks and an ECS deployment circuit breaker for automatic rollback",
+            "Crated a manual rollback workflow for application-level failures discovered after deployment"
+        ],
+        features: [
+            "Threat event API",
+            "Automated CI/CD pipeline",
+            "Secure OIDC authentication",
+            "Health monitoring",
+            "Automatic and manual rollback",
+        ],
+        status: "Completed",
+        github: "https://github.com/triscravello/threat-ingest"
+    },
+    {
         title: "FIFA World Cup Heat Risk Alert System",
         image: HeatRiskAlertImg,
         description: "A cloud-based alert system that monitors FIFA World Cup host city weather condition and generates heat risk alerts with AI-powered safety briefings",
         architecture: "Serverless AWS workflow using scheduled checks, weather data, risk scoring, and AI-generated safety summaries",
-        technologies: ["AWS, Amazon Bedrock", "Open-Meteo API", "AWS Lambda", "Python", "Automation"],
+        technologies: ["AWS", "Amazon Bedrock", "Open-Meteo API", "AWS Lambda", "Python", "Automation"],
         highlights: [
             "Built a heat risk scoring workflow for World Cup host cities",
             "Generated AI-powered safety briefings with Amazon Bedrock",
@@ -108,26 +133,6 @@ export const solo_projects = [
         github: "https://github.com/triscravello/tristan-portfolio-site",
         demo: "https://triscravello.github.io/tristan-portfolio-site/"
     }, 
-    {
-        title: "Space Travel", 
-        image: SpaceTravelImg,
-        description: "A React single-page application simulating an interplanetary evacuation experience with dynamic routing and state management.",
-        architecture: "React SPA utilizing React Router, Context API, and mock API integration.",
-        technologies: ["React", "React Router", "Mock REST API", "Context API", "State Management", "JavaScript", "Netlify"],
-        highlights: [
-            "Implemented client-side routing with protected views",
-            "Managed global state using Context API",
-            "Integrated mock API for asynchronous data handling"
-        ],
-        features: [
-            "Dynamic routing",
-            "User interaction testing",
-            "Simulated API responses"
-        ],
-        status: "Completed",
-        github: "https://github.com/triscravello/space-travel",
-        demo: "https://command-spacetravel.netlify.app/",
-    },
     {
         title: "Pokedex",
         image: PokegameImg,
@@ -207,6 +212,26 @@ export const lab_projects = [
         documentation: "https://nextwork.ai/intense_teal_innocent_alligator/docs/ai-devops-kubernetes",
     },
     {
+        title: "World Cup Dashboard with Docker & CI/CD",
+        image: WorldCupDashboardImg,
+        description: "Containerized a Next.js World Cup dashboard and automated its build and delivery workflow with Docker and GitHub Actions.",
+        architecture: "Next.js application packaged as a Docker container with a GitHub Actions pipeline for automated builds, validation, and deployment.",
+        technologies: ["Next.js", "TypeScript", "Docker", "GitHub Actions", "CI/CD", "REST API"],
+        highlights: [
+            "Built an interactive dashboard for exploring World Cup data",
+            "Created a production-ready Docker image for the application",
+            "Automated build and validation steps with GitHub Actions",
+            "Practiced application delivery from source code to a deployable container"
+        ],
+        features: [
+            "Interactive dashboard",
+            "Containerized deployment",
+            "Automated CI/CD"
+        ],
+        status: "Completed",
+        documentation: "https://nextwork.ai/intense_teal_innocent_alligator/docs/3f398956-0d40-40f2-9e1f-7eb17a6deeb6"
+    },
+    {
         title: "Next.js Application Deployment on Amazon EKS",
         image: DeployNextjstoEKSImg,
         description: "Deployed a containerized Next.js application to Amazon EKS using Docker, Amazon ECR, kubectl, and Kubernetes manifests.",
@@ -216,7 +241,7 @@ export const lab_projects = [
             "Built and pushed a Next.js Docker image to Amazon ECR",
             "Created Kubernetes Deployment and Service manifests",
             "Deployed the application to an Amazon EKS cluster",
-            "Verified pods, services, and workload status with kubectl and the EKS console"
+            "Verified application health, pods, services, and workload status using kubectl and the EKS console"
         ],
         features: [
             "Containerized Next.js app", 
@@ -234,7 +259,7 @@ export const lab_projects = [
         technologies: ["Next.js", "Docker", "Amazon ECR", "AWS", "Containerization"],
         highlights: [
             "Created a production-ready Docker image for a Next.js application",
-            "Tested the container locally before deployment",
+            "Implemented Docker HEALTHCHECK and verified production container behavior locally",
             "Tagged and pushed the image to Amazon ECR",
             "Practiced container registry workflows used in cloud deployments"
         ],
@@ -263,21 +288,45 @@ export const lab_projects = [
         documentation: "https://nextwork.ai/intense_teal_innocent_alligator/docs/526faeec-70b7-42e6-8eb0-c4e222940bce"
     },
     {
-        title: "Amazon Bedrock AI Chatbot",
-        image: AmazonBedrockChatbotImg,
-        description: "Built a generative AI chatbot using Amazon Bedrock to practice prompt engineering and cloud-based AI application development.",
-        architecture: "AWS-based generative AI project using Amazon Bedrock for managed foundation model access.",
-        technologies: ["AWS", "Amazon Bedrock", "Generative AI", "Prompt Engineering"],
+        title: "AWS Security Monitoring System",
+        image: AWSSecurityMonitoringImg,
+        description: "Built an AWS monitoring workflow that detects access to sensitive secrets and sends email notifications when security-related activity occurs.",
+        architecture: "AWS CloudTrail records Secrets Manager activity, CloudWatch Logs and metric filters detect matching events, and CloudWatch Alarms publish notifications through Amazon SNS.",
+        technologies: ["AWS", "AWS CloudTrail", "Amazon CloudWatch", "Amazon SNS", "AWS Secrets Manager", "Monitoring", "Alerting"],
         highlights: [
-            "Built a chatbot using Amazon Bedrock",
-            "Practiced prompt engineering concepts",
-            "Explored managed foundation model workflows",
-            "Connected cloud services to AI application behavior"
+            "Recorded AWS API activity with CloudTrail",
+            "Created a CloudWatch metric filter for sensitive secret access",
+            "Configured a CloudWatch alarm and SNS email notifications",
+            "Triggered test activity and troubleshoot the end-to-end alert workflow"
         ],
-        features: ["AI chatbot", "Prompt-based responses", "Cloud AI workflow"],
+        features: [
+            "Security event detection",
+            "Cloud monitoring",
+            "Email alerts"
+        ],
         status: "Completed",
-        documentation: "https://learn.nextwork.org/intense_teal_innocent_alligator/docs/aws-genai-bedrock-chatbot"
-    }
+        documentation: "https://nextwork.ai/intense_teal_innocent_alligator/docs/aws-security-monitoring"
+    },
+    {
+        title: "Secure Application Secrets with AWS Secrets Manager",
+        image: SecureSecretsManagerImg,
+        description: "Removed hard-coded AWS credentials from a Python application and retrieved configuration securely from AWS Secrets Manager.",
+        architecture: "Python application using the AWS SDK to retrieve a JSON secret at runtime and expose the required values through application configuration variables.",
+        technologies: ["AWS", "AWS Secrets Manager", "Python", "Boto3", "Git", "Credential Management"],
+        highlights: [
+            "Stored application credentials securely in AWS Secrets Manager",
+            "Created a Python function to retrieve and parse the secret at runtime",
+            "Removed hard-coded credentials from the application source code",
+            "Resolved a merge conflict while rebasing local work onto updated project code"
+        ],
+        features: [
+            "Runtime secret retrieval",
+            "Secure configuration",
+            "Credential protection"
+        ],
+        status: "Completed",
+        documentation: "https://nextwork.ai/intense_teal_innocent_alligator/docs/aws-security-secretsmanager"
+    },
 ];
 
 export const data_projects = [
