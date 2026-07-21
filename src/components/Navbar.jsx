@@ -13,7 +13,7 @@ function Navbar() {
                 
                 <li><NavLink to="/contact" aria-label='Contact page'>Contact</NavLink></li>
 
-                <li><a href={`${import.meta.env.BASE_URL}images/TristanCravelloSWEResume2026.pdf`} target='_blank' rel='noopener noreferrer' aria-label='View Resume PDF' className='resume-link'>Resume</a></li>
+                <li><a href={`${import.meta.env.BASE_URL}images/TristanCravelloSWEResume7162026.pdf`} target='_blank' rel='noopener noreferrer' aria-label='View Resume PDF' className='resume-link'>Resume</a></li>
             </ul>
         </nav>
     );
