@@ -8,6 +8,7 @@ import PokegameImg from "../assets/Pokegame.webp";
 import DogApiImg from "../assets/dog-api-postman.webp";
 import HeatRiskAlertImg from "../assets/HeatRiskAlert.webp";
 
+import AISecurityScannerImg from "../assets/AISecurityScannerPython.webp";
 import WorldCupDashboardImg from "../assets/WorldCupDashboard.webp";
 import DeployNextjstoEKSImg from "../assets/DeployNextjstoEKS.webp";
 import ContainerizeNextwithECRImg from "../assets/ContainerizeNextwithECR.webp";
@@ -51,13 +52,13 @@ export const solo_projects = [
         image: ThreatEventPlatformImg,
         description: "A production-oriented threat event API with containerized deployment, automated CI/CD, secure cloud authentication, health monitoring, and rollback workflows.",
         architecture: "Spring Boot application containerized with Docker and deployed to Amazon ECS Fargate through GitHub Actions, Amazon ECR, an Application Load Balancer, AWS Secrets Manager, and CloudWatch.",
-        technologies: ["Java", "Spring Boot", "Maven", "Docker", "GitHub Actions", "AWS", "Amazon ECS", "AWS Fargate", "Amazon ECR", "OIDC", "AWS Secrets Manager", "OIDC"],
+        technologies: ["Java", "Spring Boot", "Maven", "Docker", "GitHub Actions", "AWS", "Amazon ECS", "AWS Fargate", "Amazon ECR", "OIDC", "AWS Secrets Manager", "CloudWatch"],
         highlights: [
-            "Built a Spring Boot API for ingesting and processing threat evens",
+            "Built a Spring Boot API for ingesting and processing threat events",
             "Automated testing, Docker image builds, ECR publishing, and ECS deployment with GitHub Actions",
             "Used GitHub OIDC authentication to avoid storing long-lived AWS credentials",
             "Configured application health checks and an ECS deployment circuit breaker for automatic rollback",
-            "Crated a manual rollback workflow for application-level failures discovered after deployment"
+            "Created a manual rollback workflow for application-level failures discovered after deployment"
         ],
         features: [
             "Threat event API",
@@ -72,8 +73,8 @@ export const solo_projects = [
     {
         title: "FIFA World Cup Heat Risk Alert System",
         image: HeatRiskAlertImg,
-        description: "A cloud-based alert system that monitors FIFA World Cup host city weather condition and generates heat risk alerts with AI-powered safety briefings",
-        architecture: "Serverless AWS workflow using scheduled checks, weather data, risk scoring, and AI-generated safety summaries",
+        description: "A cloud-based alert system that monitors FIFA World Cup host city weather conditions and generates heat risk alerts with AI-powered safety briefings.",
+        architecture: "Serverless AWS workflow using scheduled checks, weather data, risk scoring, and AI-generated safety summaries.",
         technologies: ["AWS", "Amazon Bedrock", "Open-Meteo API", "AWS Lambda", "Python", "Automation"],
         highlights: [
             "Built a heat risk scoring workflow for World Cup host cities",
@@ -136,7 +137,7 @@ export const solo_projects = [
     {
         title: "Pokedex",
         image: PokegameImg,
-        description: "A interactive React game that generates two randomized Pokémon hands and determines a winner based on total experience points, featuring dynamic UI feedback and enhanced user interaction.",
+        description: "An interactive React game that generates two randomized Pokémon hands and determines a winner based on total experience points, featuring dynamic UI feedback and enhanced user interaction.",
         architecture: "Component-based React application utilizing props, state management, and conditional rendering to power dynamic game logic and interactive UI behavior.",
         technologies: ["React", "JavaScript", "HTML", "CSS"],
         highlights: [
@@ -179,6 +180,27 @@ export const solo_projects = [
 ];
 
 export const lab_projects = [
+    {
+        title: "AI Security Scanner for Python",
+        image: AISecurityScannerImg,
+        description: "Built an AI-powered command-line tool that analyzes Python source files for security vulnerabilities and returns prioritized remediation guidance.",
+        architecture: "Python CLI that validates sources files, send code to a generative AI model, parses structured JSON findings, and formats severity-based security reports.",
+        technologies: ["Python", "Gemini API", "Generative AI", "CLI", "JSON", "Colorama", "Application Security"],
+        highlights: [
+            "Built a reusable CLI for scanning Python source code",
+            "Validated file paths, extensions, empty files, and API configuraiton",
+            "Parsed and validated structured vulnerability findings from an AI response",
+            "Added color-coded severity ratings and prioritized findings by risk"
+        ],
+        features: [
+            "AI-assited code analysis",
+            "Severity-based reporting",
+            "Input validation",
+            "Remediation guidance"
+        ],
+        status: "Completed",
+        documentation: "https://nextwork.ai/intense_teal_innocent_alligator/docs/ai-security-audit-copy"
+    },
     {
         title: "AI-Powered RAG API",
         image: RAGFastAPIImg,
@@ -297,7 +319,7 @@ export const lab_projects = [
             "Recorded AWS API activity with CloudTrail",
             "Created a CloudWatch metric filter for sensitive secret access",
             "Configured a CloudWatch alarm and SNS email notifications",
-            "Triggered test activity and troubleshoot the end-to-end alert workflow"
+            "Triggered test activity and troubleshot the end-to-end alert workflow"
         ],
         features: [
             "Security event detection",

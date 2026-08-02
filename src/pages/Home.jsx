@@ -30,8 +30,7 @@ function Home() {
             <p>Based in St. Petersburg, FL | Open to remote opportunities</p>
 
             <p className="tech-stack">
-                React • Next.js • TypeScript • Java • Spring Boot • Node.js •
-                PostgreSQL • AWS • Docker • Kubernetes
+                React • Next.js • TypeScript • Java • Spring Boot • PostgreSQL • AWS • Docker • Kubernetes
             </p>
 
             <div className="cta-buttons">
@@ -77,8 +76,8 @@ function Home() {
 
                     <li>
                         <Link to="/projects">
-                            ClassPulse — Classroom behavior and analytics
-                            platform
+                            FIFA World Cup Heat Risk Alert System — AWS Lambda, weather data,
+                            and AI-generated safety alerts
                         </Link>
                     </li>
                 </ul>

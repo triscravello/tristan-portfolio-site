@@ -11,7 +11,7 @@ function About () {
             <section>
                 <h1>About Me</h1>
                 <p>
-                    Software engineer with a background in education, bringing strong communication, leadership, and problem-solving skills into modern application development. After 3 years teaching middle school social studies, I transitioned into technology and now build full-stack applications, backend services, cloud-native infrastructure, and AI-powered systems. My recent work spans React, Next.js, TypeScript, Java, Spring Boot, Node.js, FastAPI, PostgreSQL, MongoDB, Docker, Kubernetes, and AWS. I enjoy designing scalable systems, building secure cloud solutions, and continuously expanding my skills across software engineering, cloud computing, AI, DevOps, and data engineering.
+                    Software engineer with a background in education, bringing strong communication, leadership, and problem-solving skills into modern application development. After three years teaching middle school social studies, I transitioned into technology and now build full-stack applications, backend services, cloud-native infrastructure, and AI-powered systems. My recent work spans React, Next.js, TypeScript, Java, Spring Boot, Node.js, FastAPI, PostgreSQL, MongoDB, Docker, Kubernetes, and AWS. I enjoy designing scalable systems, building secure cloud solutions, and continuously expanding my skills across software engineering, cloud computing, AI, DevOps, and data engineering.
                 </p>
             </section>
             
@@ -59,12 +59,17 @@ function About () {
                     <li>AWS Lambda</li>
                     <li>Terraform</li>
                     <li>Docker Compose</li>
+                    <li>AWS Secrets Manager</li>
+                    <li>Amazon GuardDuty</li>
+                    <li>Amazon KMS</li>
                 </ul>
 
                 <h3>AI & Data</h3>
                 <ul>
                     <li>Retrieval-Augmented Generation (RAG)</li>
                     <li>Vector Databases (ChromaDB)</li>
+                    <li>AI-assisted code analysis</li>
+                    <li>Prompt engineering</li>
                     <li>Amazon Bedrock</li>
                     <li>Pandas</li>
                     <li>dbt</li>
@@ -89,7 +94,7 @@ function About () {
                     <li>Designed and deployed cloud-native applications using AWS services including ECS, EKS, Lambda, ECR, S3, IAM, VPC, Secrets Manager, CloudWatch, and SNS</li>
                     <li>Built secure CI/CD pipelines with GitHub Actions, Docker, OIDC authentication, and automated deployments</li>
                     <li>Containerized applications with Docker and orchestrated workloads using Kubernetes</li>
-                    <li>Developed AI-powered APIs using FastAPI, Retrieval-Augmented Generation (RAG), vector search, and Amazon Bedrock</li>
+                    <li>Developed AI-powered APIs using FastAPI, Retrieval-Augmented Generation (RAG), vector search, Amazon Bedrock, ang generative AI APIs</li>
                     <li>Implemented cloud monitoring, security alerting, and secrets management on AWS</li>
                     <li>Built data engineering pipelines and analytics workflows using PostgreSQL, dbt, Jupyter Notebook, and Grafana</li>
                 </ul>
