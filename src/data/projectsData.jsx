@@ -124,70 +124,6 @@ export const solo_projects = [
         status: "Completed",
         github: "https://github.com/triscravello/ClassPulse",
         demo: "https://class-pulse-henna.vercel.app/"
-    },
-    {
-        title: "Personal Portfolio",
-        image: PortfolioImg,
-        description: "A modern, responsive portfolio website showcasing full-stack development projects and technical skills.",
-        architecture: "React SPA with component-based architecture and responsive design principles.",
-        technologies: ["React", "HTML", "CSS", "JavaScript"],
-        highlights: [
-            "Component-driven architecture",
-            "Responsive layout using modern CSS",
-            "Optimized for performance and accessibility",
-            "Dynamic project rendering via data-driven structure"
-        ],
-        features: [
-            "Projects showcase",
-            "Responsive navigation",
-            "Clean semantic HTML structure"
-        ],
-        status: "Current",
-        github: "https://github.com/triscravello/tristan-portfolio-site",
-        demo: "https://triscravello.github.io/tristan-portfolio-site/"
-    }, 
-    {
-        title: "Pokedex",
-        image: PokegameImg,
-        description: "An interactive React game that generates two randomized Pokémon hands and determines a winner based on total experience points, featuring dynamic UI feedback and enhanced user interaction.",
-        architecture: "Component-based React application utilizing props, state management, and conditional rendering to power dynamic game logic and interactive UI behavior.",
-        technologies: ["React", "JavaScript", "HTML", "CSS"],
-        highlights: [
-            "Implemented randomized game logic with conditional 'legendary roll' for enhanced gameplay",
-            "Added dynamic UI refresh functionality for re-generating game states",
-            "Enhanced UX with visible game instructions and personalized design system",
-            "Integrated hover-based micro-interactions for improved user engagement"
-        ],
-        features: [
-            "Dynamic Pokemon generation",
-            "Score comparison system",
-            "Interactive UI"
-        ],
-        status: "Completed",
-        github: "https://github.com/triscravello/React-Pokedex",
-        demo: "https://repokedexact.netlify.app/"
-    },
-    {
-        title: "Dog Adoption API Platform",
-        image: DogApiImg,
-        description: "A secure RESTful API with JWT authentication and protected routes. Direct endpoint access requires a valid Bearer token.",
-        architecture: "Node.js + Express backend following MVC architecture with authentication middleware",
-        technologies: ["Node.js", "Express", "MongoDB", "REST API", "Chai", "Supertest"],
-        highlights: [
-            "Implemented user registration and login with authentication middleware",
-            "Designed RESTful endpoints for CRUD operations",
-            "Wrote integration tests using Chai and Supertest"
-        ],
-        features: [
-            "User authentication",
-            "Dog CRUD operations",
-            "Adoption logic",
-            "API testing suite"
-        ],
-        status: "Completed",
-        github: "https://github.com/triscravello/dog-adoption-platform",
-        demo: "https://dog-adoption-platform-api.onrender.com/",
-        demoNote: "Protected API endpoints — requires JWT for access. Screenshot shows GET /dogs with Bearer token."
     }
 ];
 
@@ -541,22 +477,6 @@ export const lab_projects = [
         documentation: "https://learn.nextwork.org/intense_teal_innocent_alligator/docs/ai-devops-api",
     },
     {
-        title: "RAG API Deployment with Kubernetes",
-        image: RAGDeployKubeImg,
-        description: "Deployed a containerized RAG API to a local Kubernetes cluster using Deployment and Service manifests",
-        architecture: "FastAPI RAG API containerized with Docker and deployed through Kubernetes manifests.",
-        technologies: ["Python", "FastAPI", "Docker", "Kubernetes", "kubectl", "NodePort"],
-        highlights: [
-            "Containerized a FastAPI RAG API",
-            "Created Kubernetes Deployment and Service manifests",
-            "Exposed the API using a NodePort Service",
-            "Tested request flow from local machine to Kubernetes pod"
-        ],
-        features: ["Container orchestration", "Service exposure", "API testing"],
-        status: "Completed",
-        documentation: "https://nextwork.ai/intense_teal_innocent_alligator/docs/ai-devops-kubernetes",
-    },
-    {
         title: "World Cup Dashboard with Docker & CI/CD",
         image: WorldCupDashboardImg,
         description: "Containerized a Next.js World Cup dashboard and automated its build and delivery workflow with Docker and GitHub Actions.",
@@ -575,46 +495,6 @@ export const lab_projects = [
         ],
         status: "Completed",
         documentation: "https://nextwork.ai/intense_teal_innocent_alligator/docs/3f398956-0d40-40f2-9e1f-7eb17a6deeb6"
-    },
-    {
-        title: "Next.js Application Deployment on Amazon EKS",
-        image: DeployNextjstoEKSImg,
-        description: "Deployed a containerized Next.js application to Amazon EKS using Docker, Amazon ECR, kubectl, and Kubernetes manifests.",
-        architecture: "Next.js application containerized with Docker, pushed to Amazon ECR, and deployed to Amazon EKS using Kubernetes Deployment and Service manifests.",
-        technologies: ["AWS", "Amazon EKS", "Amazon ECR", "Docker", "Kubernetes", "kubectl", "Next.js"],
-        highlights: [
-            "Built and pushed a Next.js Docker image to Amazon ECR",
-            "Created Kubernetes Deployment and Service manifests",
-            "Deployed the application to an Amazon EKS cluster",
-            "Verified application health, pods, services, and workload status using kubectl and the EKS console"
-        ],
-        features: [
-            "Containerized Next.js app", 
-            "Kubernetes deployment", 
-            "Cloud-hosted workload"
-        ],
-        status: "Completed",
-        documentation: "https://nextwork.ai/intense_teal_innocent_alligator/docs/2a469dba-2377-4301-b590-d12e014b4221"
-    },
-    {
-        title: "Containerizing a Next.js App with Docker & Amazon ECR",
-        image: ContainerizeNextwithECRImg,
-        description: "Containerized a Next.js application with Docker and pushed the image to Amazon Elastic Container Registry.",
-        architecture: "Docker-based build workflow using a production Dockerfile, local container testing, and Amazon ECR as a private image registry.",
-        technologies: ["Next.js", "Docker", "Amazon ECR", "AWS", "Containerization"],
-        highlights: [
-            "Created a production-ready Docker image for a Next.js application",
-            "Implemented Docker HEALTHCHECK and verified production container behavior locally",
-            "Tagged and pushed the image to Amazon ECR",
-            "Practiced container registry workflows used in cloud deployments"
-        ],
-        features: [
-            "Docker image build", 
-            "Local container testing", 
-            "Private container registry"
-        ],
-        status: "Completed",
-        documentation: "https://nextwork.ai/intense_teal_innocent_alligator/docs/a57d517a-5bc9-4424-a0ea-be0028f374b2"
     },
     {
         title: "CI/CD Deployment Pipeline for Amazon EKS",
@@ -651,27 +531,7 @@ export const lab_projects = [
         ],
         status: "Completed",
         documentation: "https://nextwork.ai/intense_teal_innocent_alligator/docs/aws-security-monitoring"
-    },
-    {
-        title: "Secure Application Secrets with AWS Secrets Manager",
-        image: SecureSecretsManagerImg,
-        description: "Removed hard-coded AWS credentials from a Python application and retrieved configuration securely from AWS Secrets Manager.",
-        architecture: "Python application using the AWS SDK to retrieve a JSON secret at runtime and expose the required values through application configuration variables.",
-        technologies: ["AWS", "AWS Secrets Manager", "Python", "Boto3", "Git", "Credential Management"],
-        highlights: [
-            "Stored application credentials securely in AWS Secrets Manager",
-            "Created a Python function to retrieve and parse the secret at runtime",
-            "Removed hard-coded credentials from the application source code",
-            "Resolved a merge conflict while rebasing local work onto updated project code"
-        ],
-        features: [
-            "Runtime secret retrieval",
-            "Secure configuration",
-            "Credential protection"
-        ],
-        status: "Completed",
-        documentation: "https://nextwork.ai/intense_teal_innocent_alligator/docs/aws-security-secretsmanager"
-    },
+    }
 ];
 
 export const data_projects = [
