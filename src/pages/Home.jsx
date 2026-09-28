@@ -5,32 +5,35 @@ import profilePicture from "../assets/profile-picture.webp";
 
 function Home() {
     useEffect(() => {
-        document.title = "Tristan Cravello | Full-Stack Software Engineer";
+        document.title = "Tristan Cravello | Software Engineer";
     }, []);
 
     return (
         <main className="home">
             <img
                 src={profilePicture}
-                alt="Tristan Cravello, full-stack software engineer"
+                alt="Tristan Cravello, software engineer"
                 fetchPriority="high"
                 className="profile-pic"
             />
 
-            <h1>Full-Stack Software Engineer</h1>
+            <h1>Software Engineer</h1>
 
             <p>
                 <em>
                     Educator-turned-software engineer building full-stack
-                    applications, backend systems, cloud infrastructure, and
-                    AI-powered solutions.
+                    applications, backend systems, cloud infrastructure,
+                    AI-powered solutions, and scalable distributed systems.
                 </em>
             </p>
 
-            <p>Based in St. Petersburg, FL | Open to remote opportunities</p>
+            <p>
+                Based in St. Petersburg, FL | Open to remote opportunities
+            </p>
 
             <p className="tech-stack">
-                React • Next.js • TypeScript • Java • Spring Boot • PostgreSQL • AWS • Docker • Kubernetes
+                React • Next.js • TypeScript • Python • Java • Spring Boot • PostgreSQL •
+                Redis • AWS • Docker • Kubernetes • AI Engineering
             </p>
 
             <div className="cta-buttons">
@@ -62,22 +65,29 @@ function Home() {
                 <ul>
                     <li>
                         <Link to="/projects">
-                            RunLayer — Weather-driven running apparel
-                            recommendations
+                            RunLayer — Personalized, weather-aware running
+                            apparel recommendations
                         </Link>
                     </li>
 
                     <li>
                         <Link to="/projects">
                             Threat Event Platform — Spring Boot, AWS Fargate,
-                            and automated CI/CD
+                            secure CI/CD, and deployment recovery
                         </Link>
                     </li>
 
                     <li>
                         <Link to="/projects">
-                            FIFA World Cup Heat Risk Alert System — AWS Lambda, weather data,
-                            and AI-generated safety alerts
+                            Policy-Aware AI Repair Controller — AI-assisted
+                            software repair with deterministic safety gates
+                        </Link>
+                    </li>
+
+                    <li>
+                        <Link to="/projects">
+                            12 Million-Player Leaderboard — Distributed Redis
+                            architecture and global ranking at scale
                         </Link>
                     </li>
                 </ul>
