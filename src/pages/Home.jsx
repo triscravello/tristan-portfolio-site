@@ -38,7 +38,7 @@ function Home() {
 
             <div className="cta-buttons">
                 <a
-                    href={`${import.meta.env.BASE_URL}images/TristanCravelloSWEResume7162026.pdf`}
+                    href={`${import.meta.env.BASE_URL}images/TristanCravelloSoftware-EngineerResume.docx.pdf`}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="btn btn-primary"
