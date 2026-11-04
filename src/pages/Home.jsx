@@ -47,7 +47,10 @@ function Home() {
                 className="profile-pic"
             />
 
-            <h1>Software Engineer</h1>
+            <h1>
+                Tristan Cravello
+                <span className="home-title">Software Engineer</span>
+            </h1>
 
             <p className="home-intro">
                 <em>
