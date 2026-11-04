@@ -1,74 +1,167 @@
-import { useState, useRef, useEffect } from 'react';
-import './Contact.css';
-import Form from 'react-bootstrap/Form';
-import Button from 'react-bootstrap/Button';
 
-function Contact () {
+import { useState, useEffect } from "react";
+import Form from "react-bootstrap/Form";
+import Button from "react-bootstrap/Button";
+import "./Contact.css";
+
+const FORMSPREE_ENDPOINT = "https://formspree.io/f/mpqjqkbd";
+
+function Contact() {
+    const [status, setStatus] = useState("idle");
+
     useEffect(() => {
-        document.title = 'Contact - Tristan Cravello';
+        document.title = "Contact - Tristan Cravello";
     }, []);
 
-    const [status, setStatus] = useState('idle');
-    const formRef = useRef(null);
+    const handleSubmit = async (event) => {
+        event.preventDefault();
 
-    const handleSubmit = async (e) => {
-        e.preventDefault();
-        setStatus('sending');
+        if (status === "sending") {
+            return;
+        }
 
-        const form = e.target;
+        setStatus("sending");
+
+        const form = event.currentTarget;
         const data = new FormData(form);
 
         try {
-            const response = await fetch('https://formspree.io/f/mpqjqkbd', {
-                method: 'POST',
+            const response = await fetch(FORMSPREE_ENDPOINT, {
+                method: "POST",
                 body: data,
                 headers: {
-                    'Accept': 'application/json'
-                },
+                    Accept: "application/json"
+                }
             });
 
-            if (response.ok) {
-                setStatus('success');
-                form.reset(); // reset form fields
-            } else {
-                const errorData = await response.json();
-                console.error('Formspree error:', errorData);
-                setStatus('error');
+            if (!response.ok) {
+                const errorData = await response
+                    .json()
+                    .catch(() => null);
+
+                console.error(
+                    "Formspree submission failed:",
+                    response.status,
+                    errorData
+                );
+
+                setStatus("error");
+                return;
             }
+
+            form.reset();
+            setStatus("success");
         } catch (error) {
-            console.error('Form submission error:', error);
-            setStatus('error');
+            console.error(
+                "Contact form submission error:",
+                error
+            );
+
+            setStatus("error");
         }
     };
 
     return (
-        <main className='contact text-center'>
-            <h1 className='text-center'>Contact Me</h1>
-            <p className='text-center'>If you wish to contact me, please use the form below. Thank you very much.</p>
+        <main className="contact text-center">
+            <h1>Get in Touch</h1>
 
-            {status === 'success' && <p style={{color:'lightgreen'}} aria-live='polite'>Message sent successfully!</p>}
-            {status === 'error' && <p style={{color: 'tomato'}} aria-live='polite'>Oops! Something went wrong. Please try again.</p>}
-            
-            <Form className="contact-form mx-auto" ref={formRef} onSubmit={handleSubmit}>
-                <Form.Group className="mb-3" controlId="name" aria-label="Enter your full name">
-                    <Form.Label>Full Name</Form.Label>
-                    <Form.Control type="text" placeholder="Full Name" name="name" required />
-                </Form.Group>
-                <Form.Group className="mb-3" controlId="email" aria-label="Enter your email address">
-                    <Form.Label>Email address</Form.Label>
-                    <Form.Control type="email" placeholder="name@example.com" name="email" required />
-                </Form.Group>
-                <Form.Group className="mb-3" controlId="message" aria-label="Enter your message below">
-                    <Form.Label>Message</Form.Label>
-                    <Form.Control as="textarea" rows={5} name="message" placeholder="Please enter your message here" required />
-                </Form.Group>
-                <Button 
-                    className="submit-button" 
-                    type="submit" 
-                    aria-label="Submit contact form"
-                    disabled={status === 'sending'}
+            <p className="contact-intro">
+                Interested in connecting about software engineering
+                opportunities, technical projects, or collaboration?
+                I'd be happy to hear from you. Send me a message
+                using the form below.
+            </p>
+
+            <div
+                className="contact-status"
+                role="status"
+                aria-live="polite"
+                aria-atomic="true"
+            >
+                {status === "success" && (
+                    <p className="contact-success">
+                        Your message was sent successfully.
+                        Thank you for reaching out!
+                    </p>
+                )}
+
+                {status === "error" && (
+                    <p className="contact-error">
+                        Your message could not be sent.
+                        Please try again.
+                    </p>
+                )}
+
+                {status === "sending" && (
+                    <p className="contact-sending">
+                        Sending your message...
+                    </p>
+                )}
+            </div>
+
+            <Form
+                className="contact-form mx-auto"
+                onSubmit={handleSubmit}
+            >
+                <Form.Group
+                    className="mb-3"
+                    controlId="contact-name"
                 >
-                    {status === 'sending' ? 'Sending...' : 'Submit Form'}
+                    <Form.Label>Full Name</Form.Label>
+
+                    <Form.Control
+                        type="text"
+                        name="name"
+                        placeholder="Your full name"
+                        autoComplete="name"
+                        maxLength={100}
+                        required
+                        disabled={status === "sending"}
+                    />
+                </Form.Group>
+
+                <Form.Group
+                    className="mb-3"
+                    controlId="contact-email"
+                >
+                    <Form.Label>Email Address</Form.Label>
+
+                    <Form.Control
+                        type="email"
+                        name="email"
+                        placeholder="name@example.com"
+                        autoComplete="email"
+                        maxLength={254}
+                        required
+                        disabled={status === "sending"}
+                    />
+                </Form.Group>
+
+                <Form.Group
+                    className="mb-4"
+                    controlId="contact-message"
+                >
+                    <Form.Label>Message</Form.Label>
+
+                    <Form.Control
+                        as="textarea"
+                        rows={6}
+                        name="message"
+                        placeholder="Tell me a little about what you'd like to discuss..."
+                        maxLength={5000}
+                        required
+                        disabled={status === "sending"}
+                    />
+                </Form.Group>
+
+                <Button
+                    className="submit-button"
+                    type="submit"
+                    disabled={status === "sending"}
+                >
+                    {status === "sending"
+                        ? "Sending..."
+                        : "Send Message"}
                 </Button>
             </Form>
         </main>

@@ -11,15 +11,15 @@ function About() {
             <section>
                 <h1>About Me</h1>
                 <p>
-                    Software engineer with a background in education, bringing strong communication,
-                    leadership, and problem-solving skills into modern application development.
-                    After three years teaching middle school social studies, I transitioned into
-                    technology and now build full-stack applications, backend services, cloud-native
-                    infrastructure, AI-powered systems, and distributed system prototypes. My recent
-                    work spans React, Next.js, TypeScript, Python, Java, Spring Boot, Node.js, FastAPI,
-                    PostgreSQL, Redis, Docker, Kubernetes, AWS, and AI-assisted development. I enjoy
-                    designing scalable systems, solving backend and infrastructure problems, and
-                    exploring how AI agents can support reliable software engineering workflows.
+                    I'm a software engineer with a background in education, focused on building reliable full-stack appliations, backend services, distributed systems, and AI-powered software. My projects combine modern application development with practical engineering challenges involving concurrency, database correctness, scalability, automated testing, and failure recovery.
+                </p>
+
+                <p>
+                    My recent work includes Java and Spring Boot APIs, TypeScript and Next.js applications, Redis-backed distributed systems, and machine learning pipelines built with Python and PyTorch. I enjoy understanding how systems behave under real-world constraints and using reproducible experiments to validate engineering decisions.
+                </p>
+
+                <p>
+                    Before transitioning into software engineering, I spent three years teaching middle school social studies. That experience strengthened my communication, leadership, and problem-solving skills, which I now bring to technical collaboration and community learning experiences.
                 </p>
             </section>
 
@@ -28,30 +28,27 @@ function About() {
             <section>
                 <h2>Technical Skills</h2>
 
-                <h3>Frontend</h3>
+                <h3>Languages & Frontend</h3>
                 <ul>
-                    <li>HTML5</li>
-                    <li>CSS3</li>
+                    <li>Java</li>
+                    <li>Python</li>
                     <li>JavaScript (ES6+)</li>
                     <li>TypeScript</li>
                     <li>React</li>
                     <li>Next.js</li>
-                    <li>Tailwind CSS</li>
-                    <li>Bootstrap</li>
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>Tailwind</li>
                 </ul>
 
                 <h3>Backend & Databases</h3>
                 <ul>
-                    <li>Python</li>
-                    <li>Java</li>
                     <li>Spring Boot</li>
                     <li>Node.js</li>
                     <li>Express.js</li>
                     <li>FastAPI</li>
                     <li>REST APIs</li>
                     <li>PostgreSQL</li>
-                    <li>PostGIS</li>
-                    <li>MySQL</li>
                     <li>MongoDB</li>
                     <li>Redis</li>
                     <li>Prisma ORM</li>
@@ -61,58 +58,32 @@ function About() {
                 <ul>
                     <li>AWS</li>
                     <li>Docker</li>
-                    <li>Docker Compose</li>
                     <li>Kubernetes</li>
                     <li>GitHub Actions</li>
                     <li>CI/CD</li>
-                    <li>Amazon ECS / Fargate</li>
-                    <li>Amazon EKS</li>
-                    <li>Amazon ECR</li>
-                    <li>AWS Lambda</li>
-                    <li>AWS Secrets Manager</li>
-                    <li>Amazon CloudWatch</li>
-                    <li>OIDC Authentication</li>
                     <li>Terraform</li>
                 </ul>
 
-                <h3>AI Engineering & Data</h3>
+                <h3>AI Engineering & Machine Learning</h3>
                 <ul>
-                    <li>Retrieval-Augmented Generation (RAG)</li>
-                    <li>Vector Search & ChromaDB</li>
-                    <li>Claude Code</li>
-                    <li>AI Agent Workflows</li>
-                    <li>Model Context Protocol (MCP)</li>
-                    <li>AI-assisted Debugging & Code Analysis</li>
-                    <li>Prompt Engineering</li>
-                    <li>Amazon Bedrock</li>
+                    <li>PyTorch</li>
+                    <li>scikit-learn</li>
                     <li>Pandas</li>
-                    <li>dbt</li>
-                    <li>Jupyter Notebook</li>
-                    <li>Grafana</li>
+                    <li>NumPy</li>
+                    <li>RAG</li>
+                    <li>AI agents</li>
+                    <li>Claude Code</li>
+                    <li>MCP</li>
                 </ul>
 
-                <h3>Systems & Architecture</h3>
+                <h3>Systems & Engineering Practices</h3>
                 <ul>
                     <li>Distributed Systems</li>
-                    <li>System Design</li>
-                    <li>Event-Driven Architecture</li>
+                    <li>Concurrency</li>
                     <li>Idempotency</li>
-                    <li>Transactional Outbox Pattern</li>
-                    <li>Geospatial Systems</li>
-                    <li>Caching & Rate Limiting</li>
-                    <li>Scalability & Performance</li>
-                    <li>Observability & Failure Recovery</li>
-                </ul>
-
-                <h3>Tools & Practices</h3>
-                <ul>
-                    <li>Git</li>
-                    <li>GitHub</li>
-                    <li>Swagger UI</li>
-                    <li>Pytest</li>
-                    <li>Automated Testing</li>
-                    <li>Agile Development</li>
-                    <li>Data Structures & Algorithms</li>
+                    <li>Event-driven architecture</li>
+                    <li>Testing</li>
+                    <li>Observability</li>
                 </ul>
             </section>
 
@@ -122,34 +93,19 @@ function About() {
                 <h2>Engineering Experience</h2>
                 <ul>
                     <li>
-                        Built full-stack applications and backend APIs using React, Next.js,
-                        Node.js, Spring Boot, FastAPI, PostgreSQL, MongoDB, and Redis
+                        Built full-stack applications using React, Next.js, TypeScript, PostgreSQL, and Prisma, with an emphasis on API integration, authentication, and application reliability.
                     </li>
                     <li>
-                        Designed and deployed cloud-native applications using AWS, Docker,
-                        Kubernetes, ECS, EKS, Lambda, ECR, and supporting cloud services
+                        Developed Java Spring Boot backend systems exploring concurrent reservations, transactional correctness, idempotency, and distributed admission control.
                     </li>
                     <li>
-                        Built secure CI/CD workflows using GitHub Actions, Docker, OIDC
-                        authentication, automated verification, and deployment rollback
+                        Built an end-to-end machine learning pipeline using Python, scikit-learn, and PyTorch, incorporating group-safe evaluation, leakage-resistant preprocessing, transfer learning, and containerized inference.
                     </li>
                     <li>
-                        Developed AI-powered applications using RAG, vector search,
-                        generative AI APIs, Amazon Bedrock, and AI-assisted engineering tools
+                        Developed AI-powered engineering workflows exploring deterministic policy enforcement, bounded automated repair, debugging, and multi-agent collaboration.
                     </li>
                     <li>
-                        Built agentic engineering workflows for debugging, bounded repair,
-                        incident investigation, specification-driven development, and
-                        multi-agent collaboration
-                    </li>
-                    <li>
-                        Designed distributed systems exploring partitioning, caching,
-                        event-driven architecture, eventual consistency, geospatial search,
-                        idempotency, and failure recovery
-                    </li>
-                    <li>
-                        Built data engineering and analytics workflows using PostgreSQL,
-                        dbt, Jupyter, Pandas, and Grafana
+                        Applied Docker, AWS, automated testing, and infrastructure tooling to build, validate, and deploy software projects.
                     </li>
                 </ul>
             </section>
@@ -162,7 +118,7 @@ function About() {
                 <h3>Build Master — NextWork</h3>
 
                 <p>
-                    As a Build Master with NextWork, I help lead collaborative Build & Brew
+                    Drawing on my background in education, I design and facilitate Build & Brew
                     sessions where developers learn by building hands-on software, cloud,
                     and AI projects. I design and facilitate portfolio-ready technical
                     projects, guide participants through engineering challenges, and help
@@ -199,12 +155,10 @@ function About() {
             <section>
                 <h2>Currently Learning</h2>
                 <ul>
-                    <li>Advanced System Design</li>
-                    <li>AI Agents & Agentic Software Engineering</li>
-                    <li>Cloud Architecture</li>
-                    <li>Platform Engineering</li>
-                    <li>Infrastructure as Code</li>
-                    <li>Distributed Systems</li>
+                    <li>Distributed Systems & Backend Reliability</li>
+                    <li>AI Agent Security & Observability</li>
+                    <li>Machine Learning Engineering & MLOps</li>
+                    <li>Cloud-Native Architecture & Platform Engineering</li>
                 </ul>
             </section>
 

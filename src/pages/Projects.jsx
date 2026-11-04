@@ -1,82 +1,96 @@
+
 import { useEffect } from "react";
-import './Projects.css';
+import "./Projects.css";
 import ProjectCard from "../components/ProjectCard";
-import { solo_projects, ai_engineering_projects, system_design_projects, lab_projects, data_projects } from "../data/projectsData";
+
+import {
+    solo_projects,
+    ai_engineering_projects,
+    system_design_projects
+} from "../data/projectsData";
 
 function Projects() {
     useEffect(() => {
-        document.title = 'Projects - Tristan Cravello';
+        document.title = "Projects - Tristan Cravello";
     }, []);
 
     return (
         <main className="projects text-center">
-            <h1 id="projects-title">Software Engineering Portfolio</h1>
-            <section>
-                <h2>Featured Software Projects</h2>
+            <h1 id="projects-title">
+                Software Engineering Portfolio
+            </h1>
+
+            {/* Featured Software Projects */}
+            <section aria-labelledby="featured-projects-title">
+                <h2 id="featured-projects-title">
+                    Featured Software Projects
+                </h2>
 
                 <p className="section-description">
-                    Full-stack applications and production-oriented software projects spanning backend engineering, cloud infrastructure, APIs, and product development.
+                    Full-stack applications and backend systems
+                    built with an emphasis on API design,
+                    database correctness, cloud infrastructure,
+                    automated testing, and reliable software delivery.
                 </p>
 
                 <div className="projects-grid">
-                    {solo_projects.map((project, index) => (
-                        <ProjectCard key={index} project={project} />
+                    {solo_projects.map((project) => (
+                        <ProjectCard
+                            key={project.github || project.documentation || project.title}
+                            project={project}
+                        />
                     ))}
                 </div>
             </section>
 
-            <section className="ai-engineering-section">
-                <h2>AI Engineering & Agentic Development</h2>
+            {/* AI Engineering & Machine Learning */}
+            <section
+                className="ai-engineering-section"
+                aria-labelledby="ai-projects-title"
+            >
+                <h2 id="ai-projects-title">
+                    AI Engineering & Machine Learning
+                </h2>
 
                 <p className="section-description">
-                    AI-assisted software engineering projects focused on autonomous repair, specification-driven development, debugging, agent workflows, MCP, and deterministic guardrails.
+                    AI engineering and machine learning projects
+                    exploring agent safety, multi-agent workflows,
+                    leakage-resistant model training, automated
+                    verification, and secure inference deployment.
                 </p>
 
                 <div className="projects-grid">
-                    {ai_engineering_projects.map((project, index) => (
-                        <ProjectCard key={`ai-engineering-${index}`} project={project} />
+                    {ai_engineering_projects.map((project) => (
+                        <ProjectCard
+                            key={project.github || project.documentation || project.title}
+                            project={project}
+                        />
                     ))}
                 </div>
             </section>
 
-            <section className="system-design-section">
-                <h2>Systems & Architecture</h2>
+            {/* System Design & Distributed Systems */}
+            <section
+                className="system-design-section"
+                aria-labelledby="system-design-title"
+            >
+                <h2 id="system-design-title">
+                    System Design & Distributed Systems
+                </h2>
 
                 <p className="section-description">
-                    System design case studies exploring distributed systems, scalability, data architecture, reliability, performance, consistency, and failure recovery.
+                    Backend engineering and system design projects
+                    focused on concurrency, distributed coordination,
+                    transactional correctness, scalability,
+                    performance testing, and failure recovery.
                 </p>
 
                 <div className="projects-grid">
-                    {system_design_projects.map((project, index) => (
-                        <ProjectCard key={`system-design-${index}`} project={project} />
-                    ))}
-                </div>
-            </section>
-
-            <section className="lab-section">
-                <h2>Cloud, AI & DevOps Labs</h2>
-
-                <p className="section-description">
-                    Hands-on cloud infrastructure, AI, containerization, Kubernetes, and CI/CD projects completed through NextWork.
-                </p>
-
-                <div className="projects-grid">
-                    {lab_projects.map((project, index) => (
-                        <ProjectCard key={`lab-${index}`} project={project} />
-                    ))}
-                </div>
-            </section>
-
-            <section className="data-projects">
-                <h2>Data Engineering & Analytics Labs</h2>
-
-                <p className="section-description">
-                    Hands-on data engineering, analytics engineering, visualization, and AI-assisted workflows completed through NextWork.
-                </p>
-
-                <div className="projects-grid">
-                    {data_projects.map((project, index) => (
-                        <ProjectCard key={`data-${index}`} project={project} />
+                    {system_design_projects.map((project) => (
+                        <ProjectCard
+                            key={project.github || project.documentation || project.title}
+                            project={project}
+                        />
                     ))}
                 </div>
             </section>

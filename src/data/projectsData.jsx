@@ -3,37 +3,22 @@
 import RunLayerImg from "../assets/RunlayerDemo.webp";
 import ThreatEventPlatformImg from "../assets/ThreatEventPlatform.webp";
 import ClassPulseImg from "../assets/ClassPulse.webp"
-import PortfolioImg from "../assets/portfolio-site.webp";
-import PokegameImg from "../assets/Pokegame.webp";
-import DogApiImg from "../assets/dog-api-postman.webp";
 import HeatRiskAlertImg from "../assets/HeatRiskAlert.webp";
+import DistributedTicketReservationAPIImg from "../assets/ticketreservationAPI.webp";
 
 import PolicyRepairControllerImg from "../assets/PolicyRepairController.webp";
-import IdempotentReservationAPIImg from "../assets/IdempotentReservation.webp";
+import RunningReadinessMLImg from "../assets/RunningReadinessML.webp";
 import GatedExpressUpgradeImg from "../assets/GatedExpress.webp";
 import DebugPaymentOutageImg from "../assets/DebugPaymentOutage.webp";
 import RepairEventPipelineImg from "../assets/EventPipelineTeams.webp";
 
+import TapToPayAuthorizationImg from "../assets/TapToPayAuthorization.webp";
+import RideDispatchEngineImg from "../assets/RideDispatchEngine.webp";
+import TicketDropConcurrencyImg from "../assets/TicketDropConcurrency.webp";
 import PrivacySafeNearbyGridImg from "../assets/PrivacySafeGrid.webp";
 import PlayerLeaderboardImg from "../assets/PlayerLeaderboard.webp";
 import PublishToSearchImg from "../assets/PublishToSearch.webp";
-import AISearchModeImg from "../assets/AIandSearchMode.webp";
 import StrideSyncDesignImg from "../assets/StrideSyncDesign.webp";
-
-import AISecurityScannerImg from "../assets/AISecurityScannerPython.webp";
-import WorldCupDashboardImg from "../assets/WorldCupDashboard.webp";
-import DeployNextjstoEKSImg from "../assets/DeployNextjstoEKS.webp";
-import ContainerizeNextwithECRImg from "../assets/ContainerizeNextwithECR.webp";
-import AutomateCICDforEKSImg from "../assets/AutomateCICDforEKS.webp";
-import RAGDeployKubeImg from "../assets/RAGDeployKube.webp";
-import RAGFastAPIImg from "../assets/RAGFastAPI.webp";
-import SecureSecretsManagerImg from "../assets/SecureSecretsManager.webp";
-import AWSSecurityMonitoringImg from "../assets/AWSSecurityMonitoring.webp";
-
-import DbtMCPImg from "../assets/DbtMCP.webp";
-import GrafanaImg from "../assets/Grafana.webp";
-import JupyterMCPImg from "../assets/JupyterMCP.webp";
-import PostgresDockerMCPImg from "../assets/PostgresDockerMCP.webp";
 
 export const solo_projects = [
     {
@@ -81,6 +66,25 @@ export const solo_projects = [
         ],
         status: "Completed",
         github: "https://github.com/triscravello/threat-ingest"
+    },
+    {
+        title: "Distributed Ticket Reservation API",
+        image: DistributedTicketReservationAPIImg,
+        description: "Built a distributed ticket reservation API that coordinates concurrent booking requests across multiple application instances while preventing duplicate seat reservations and preserving transactional correctness.",
+        architecture: "Java Spring Boot architecture with two containerized API instances, Redis Lua-based distributed admission control, and PostgreSQL transactions using pessimistic row locking, idempotency keys, and unique seat constraints. Docker Compose orchestrates the services, with k6 supporting load testing.",
+        technologies: ["Java", "Spring Boot", "PostgreSQL", "Redis", "Lua", "Docker", "Docker Compose", "Maven", "k6", "REST API"],
+        highlights: [],
+        features: [
+            "Distributed admission control",
+            "Concurrent ticket reservations",
+            "Idempotent booking requests",
+            "Transactional seat locking",
+            "Duplicate reservation prevention", 
+            "Redis outage handling",
+            "Load testing and correctness verification"
+        ],
+        status: "Completed",
+        github: "https://github.com/triscravello/ticket-reservation-api"
     },
     {
         title: "FIFA World Cup Heat Risk Alert System",
@@ -158,35 +162,35 @@ export const ai_engineering_projects = [
         status: "Completed",
         documentation: "https://nextwork.ai/intense_teal_innocent_alligator/docs/3b68a440-2ee3-4678-b58a-b6655cd83bdd",
     },
-    // Idempotent Reservation API
+    // Running Readiness ML
     {
-        title: "Idempotent Reservation API",
-        image: IdempotentReservationAPIImg,
-        description: "Built a specification-driven reservation API that prevents duplicate bookings, preserves capacity under retries, and handles cancellation safely through explicit idempotency rules.",
-        architecture: "Node.js HTTP API designed around normalized reservation identity, capacity invariants, idempotent request handling, cancellation tombstones, and automated acceptance tests.",
-        technologies: [
-            "Node.js",
-            "JavaScript",
-            "Claude Code",
-            "REST API",
-            "Idempotency",
-            "Automated Testing"
-        ],
+        title: "Running Readiness ML",
+        image: RunningReadinessMLImg,
+        description: "Built an end-to-end machine learning system that predicts next-day running recovery needs using leakage-resistant data pipelines, group-safe model evaluation, PyTorch transfer learning, and a containerized inference API.",
+        architecture: "Seven-stage Python ML pipeline with runner-isolated data splitting, fold-local preprocessing, scikit-learn model evaluation, PyTorch encoder pretraining and fine-tuning, SHA-256 artifact lineage verification, and a FastAPI inference service with strict Pydantic validation and Docker-based CPU deployment.",
+        technologies: ["Python", "PyTorch", "scikit-learn", "Pandas", "NumPy", "FastAPI", "Pydantic", "Docker", "Machine Learning", "Transfer Learning", "REST API"],
         highlights: [
-            "Translated ambiguous reservation requirements into explicit behavioral contracts",
-            "Implemented idempotent reservation handling to prevent duplicate bookings under retries",
-            "Protected inventory capacity with deterministic reservation and cancellation rules",
-            "Verified the implementation against an automated acceptance test suite"
+            "Developed a seven-stage ML workflow covering data validation, feature engineering, model selection, transfer learning, and inference deployment",
+            "Prevented runner-level data leakage through group-aware splitting and training-fold-only preprocessing",
+            "Evaluated a decision tree against a majority-class baseline, documenting 83.3% accuracy and a 0.875 F1 score",
+            "Implemented PyTorch encoder pretraining and fine-tuning using a self-supervised denoising task",
+            "Added SHA-256 artifact verification to detect modified model checkpoints and prevent unverified packaging",
+            "Built a FastAPI inference boundary with strict Pydantic schemas that reject unexpected features and invalid numeric inputs",
+            "Designed a multi-stage Docker serving image that excludes development data from the runtime environment"
         ],
         features: [
-            "Idempotent reservations",
-            "Duplicate booking prevention",
-            "Capacity protection",
-            "Idempotent cancellation",
-            "Acceptance testing"
+            "Next-day running recovery prediction",
+            "Leakage-resistant data preprocessing",
+            "Group-safe model evaluation",
+            "Feature contract enforcement",
+            "PyTorch transfer learning",
+            "Model artifact integrity verification",
+            "Strict inference API validation",
+            "Containerized CPU inference",
+            "Automated verification tests"
         ],
         status: "Completed",
-        documentation: "https://nextwork.ai/intense_teal_innocent_alligator/docs/2d8bd79a-c6d7-49ae-a32f-ab66ce25bb3e"
+        github: "https://github.com/triscravello/running-readiness-ml"
     },
     // Gated Express 5 Upgrade
     {
@@ -280,6 +284,81 @@ export const ai_engineering_projects = [
 ];
 
 export const system_design_projects = [
+    // Tap-to-Pay Authorization System
+    {
+        title: "Tap-to-Pay Authorization System",
+        image: TapToPayAuthorizationImg,
+        description: "Built a payment authorization system designed to process concurrent tap-to-pay requests, prevent duplicate charges, and recover safely from uncertain transaction outcomes.",
+        architecture: "Java Spring Boot backend with PostgreSQL for durable authorization records and transactional correctness, Redis for non-authoritative performance hints, and idempotency controls to coordinate payment requests and issuer responses.",
+        technologies: ["Java", "Spring Boot", "PostgreSQL", "Redis", "REST API", "Docker", "Distributed Systems", "Idempotency"],
+        highlights: [
+            "Designed an idempotent authorization workflow to prevent duplicate payment processing",
+            "Used PostgreSQL as the authoritative store for payment state and transaction correctness",
+            "Modeled issuer timeouts and uncertain authorization outcomes requiring reconciliation",
+            "Separated Redis performance optimization from durable financial correctness",
+            "Developed concurrency and failure scenarios to evaluate duplicate-tap handling and recovery behavior"
+        ],
+        features: [
+            "Payment authorization API",
+            "Idempotent payment processing",
+            "Duplicate-tap protection",
+            "Durable transaction records",
+            "Issuer timeout handling",
+            "Unknown-outcome reconciliation",
+            "Concurrency and failure testing"
+        ],
+        status: "Completed",
+        documentation: "https://nextwork.ai/triscravello/docs/61062024-4105-480b-8435-66c5df9e24f8"
+    },
+    // Ride Dispatch Engine
+    {
+        title: "Ride Dispatch Engine",
+        image: RideDispatchEngineImg,
+        description: "Built a real-time ride dispatch and surge pricing engine that matches riders with available drivers, coordinates concurrent assignments, and evaluates dispatch reliability under simulated demand spikes.",
+        architecture: "Python FastAPI backend with Redis-backed driver availability, atomic assignment operations, deterministic dispatch simulations, and automated concurrency tests for duplicate-assignment prevention.",
+        technologies: ["Python", "FastAPI", "Redis", "REST API", "Docker", "Pytest", "Concurrency", "Distributed Systems"],
+        highlights: [
+            "Implemented driver matching and dispatch workflows for simulated ride requests",
+            "Used Redis atomic operations to coordinate driver claims across concurrent workers",
+            "Reproduced duplicate-assignment race conditions to investigate dispatch correctness",
+            "Modeled demand spikes and surge pricing behavior using deterministic simulations",
+            "Developed automated concurrency tests and benchmark workflows to evaluate assignment reliability"
+        ],
+        features: [
+            "Real-time ride dispatch",
+            "Driver availability tracking",
+            "Atomic driver assignments",
+            "Duplicate-assignment prevention",
+            "Surge pricing simulation",
+            "Concurrent worker processing",
+            "Reliability benchmarking"
+        ],
+        status: "Completed",
+        documentation: "https://nextwork.ai/triscravello/docs/a54824cf-bd8f-4c34-bd78-1c03acb66f68"
+    },
+    // Ticket Drop Concurrency
+    {
+        title: "Ticket Drop Concurrency",
+        image: TicketDropConcurrencyImg,
+        description: "Explored concurrency challenges in high-demand ticket releases, focusing on how simultaneous purchase requests compete for limited inventory and how race conditions can affect reservation correctness.",
+        architecture: "Java concurrency lab modeling simultaneous ticket purchase attempts, shared inventory state, and contention scenarios to investigate safe coordination of competing requests.",
+        technologies: ["Java", "Concurrency", "Multithreading", "System Design"],
+        highlights: [
+            "Investigated concurrent purchase requests competing for limited ticket inventory",
+            "Explored race conditions and shared-state correctness during high-demand ticket releases",
+            "Examined the relationship between request concurrency, inventory limits, and overselling risks",
+            "Applied concurrency concepts to a ticket reservation scenario"
+        ],
+        features: [
+            "Concurrent ticket requests",
+            "Shared inventory modeling",
+            "Race condition analysis",
+            "Inventory contention",
+            "Concurrency experimentation"
+        ],
+        status: "Completed",
+        documentation: "https://nextwork.ai/triscravello/docs/df8312bc-22f5-44c8-b83d-7c775c98dc53"
+    },
     // Privacy-Safe Nearby Grid
     {
         title: "Privacy-Safe Nearby Grid",
@@ -373,37 +452,6 @@ export const system_design_projects = [
         status: "Completed",
         documentation: "https://nextwork.ai/intense_teal_innocent_alligator/docs/45f8c210-31d2-4ccb-a7a2-301c6f40f888"
     },
-    // Search and AI Mode Simulator
-    {
-        title: "Search and AI Mode Simulator",
-        image: AISearchModeImg,
-        description: "Built a browser-based simulator comparing traditional search with an AI-style retrieval path under latency budgets, concurrent fan-out, and partial backend failures.",
-        architecture: "Client-safe search simulation modeling distributed retrieval with concurrent fan-out, latency budgets, backend deadlines, fallback behavior, and replicated search infrastructure.",
-        technologies: [
-            "JavaScript",
-            "HTML",
-            "CSS",
-            "Distributed Systems",
-            "Concurrent Requests",
-            "Performance Engineering",
-            "Resilience"
-        ],
-        highlights: [
-            "Modeled classic search and AI-style retrieval as different latency-sensitive request paths",
-            "Used concurrent fan-out to reduce end-to-end retrieval latency",
-            "Tested behavior against a 700 ms classic-search latency objective",
-            "Demonstrated approximately 475 ms concurrent fan-out behavior with graceful fallback"
-        ],
-        features: [
-            "Search mode simulation",
-            "Concurrent fan-out",
-            "Latency budgets",
-            "Graceful degradation",
-            "Failure simulation"
-        ],
-        status: "Completed",
-        documentation: "https://nextwork.ai/intense_teal_innocent_alligator/docs/49b8da02-6589-4712-b03e-64ff182df3be"
-    },
     // StrideSync
     {
         title: "StrideSync",
@@ -435,183 +483,5 @@ export const system_design_projects = [
         ],
         status: "Completed",
         documentation: "https://nextwork.ai/intense_teal_innocent_alligator/docs/b1c5f4fe-c159-4810-a930-3427fc977e85"
-    }
-];
-
-export const lab_projects = [
-    {
-        title: "AI Security Scanner for Python",
-        image: AISecurityScannerImg,
-        description: "Built an AI-powered command-line tool that analyzes Python source files for security vulnerabilities and returns prioritized remediation guidance.",
-        architecture: "Python CLI that validates sources files, send code to a generative AI model, parses structured JSON findings, and formats severity-based security reports.",
-        technologies: ["Python", "Gemini API", "Generative AI", "CLI", "JSON", "Colorama", "Application Security"],
-        highlights: [
-            "Built a reusable CLI for scanning Python source code",
-            "Validated file paths, extensions, empty files, and API configuraiton",
-            "Parsed and validated structured vulnerability findings from an AI response",
-            "Added color-coded severity ratings and prioritized findings by risk"
-        ],
-        features: [
-            "AI-assited code analysis",
-            "Severity-based reporting",
-            "Input validation",
-            "Remediation guidance"
-        ],
-        status: "Completed",
-        documentation: "https://nextwork.ai/intense_teal_innocent_alligator/docs/ai-security-audit-copy"
-    },
-    {
-        title: "AI-Powered RAG API",
-        image: RAGFastAPIImg,
-        description: "Built a Retrieval-Augmented Generation API that retrieves relevant context from a vector database and returns AI-generated answers through a FastAPI endpoint.",
-        architecture: "FastAPI backend with vector search, semantic retrieval, and API testing through Swagger UI.",
-        technologies: ["Python", "FastAPI", "ChromaDB", "RAG", "Vector Search", "REST API"],
-        highlights: [
-            "Created an /ask endpoint for AI question answering",
-            "Connected retrieved context to generated responses",
-            "Tested API behavior through Swagger UI",
-            "Practiced backend AI application design"
-        ],
-        features: ["RAG Endpoint", "Context retrieval", "API testing"],
-        status: "Completed",
-        documentation: "https://learn.nextwork.org/intense_teal_innocent_alligator/docs/ai-devops-api",
-    },
-    {
-        title: "World Cup Dashboard with Docker & CI/CD",
-        image: WorldCupDashboardImg,
-        description: "Containerized a Next.js World Cup dashboard and automated its build and delivery workflow with Docker and GitHub Actions.",
-        architecture: "Next.js application packaged as a Docker container with a GitHub Actions pipeline for automated builds, validation, and deployment.",
-        technologies: ["Next.js", "TypeScript", "Docker", "GitHub Actions", "CI/CD", "REST API"],
-        highlights: [
-            "Built an interactive dashboard for exploring World Cup data",
-            "Created a production-ready Docker image for the application",
-            "Automated build and validation steps with GitHub Actions",
-            "Practiced application delivery from source code to a deployable container"
-        ],
-        features: [
-            "Interactive dashboard",
-            "Containerized deployment",
-            "Automated CI/CD"
-        ],
-        status: "Completed",
-        documentation: "https://nextwork.ai/intense_teal_innocent_alligator/docs/3f398956-0d40-40f2-9e1f-7eb17a6deeb6"
-    },
-    {
-        title: "CI/CD Deployment Pipeline for Amazon EKS",
-        image: AutomateCICDforEKSImg,
-        description: "Automated build, push, and deployment workflows for an Amazon EKS application using GitHub Actions.",
-        architecture: "GitHub Actions pipeline using OIDC authentication, Docker image build, Amazon ECR, kubectl, and Kubernetes rollout verification.",
-        technologies: ["GitHub Actions", "AWS", "Amazon EKS", "Amazon ECR", "Docker", "Kubernetes", "OIDC", "CI/CD"],
-        highlights: [
-            "Configured GitHub Actions to build and push Docker images",
-            "Used OIDC for secure AWS authentication without long-lived credentials",
-            "Automated Kubernetes deployments to Amazon EKS",
-            "Tested failure handling and rollback behavior"
-        ],
-        features: ["Automated deployment", "OIDC authentication", "Rollback verification"],
-        status: "Completed",
-        documentation: "https://nextwork.ai/intense_teal_innocent_alligator/docs/526faeec-70b7-42e6-8eb0-c4e222940bce"
-    },
-    {
-        title: "AWS Security Monitoring System",
-        image: AWSSecurityMonitoringImg,
-        description: "Built an AWS monitoring workflow that detects access to sensitive secrets and sends email notifications when security-related activity occurs.",
-        architecture: "AWS CloudTrail records Secrets Manager activity, CloudWatch Logs and metric filters detect matching events, and CloudWatch Alarms publish notifications through Amazon SNS.",
-        technologies: ["AWS", "AWS CloudTrail", "Amazon CloudWatch", "Amazon SNS", "AWS Secrets Manager", "Monitoring", "Alerting"],
-        highlights: [
-            "Recorded AWS API activity with CloudTrail",
-            "Created a CloudWatch metric filter for sensitive secret access",
-            "Configured a CloudWatch alarm and SNS email notifications",
-            "Triggered test activity and troubleshot the end-to-end alert workflow"
-        ],
-        features: [
-            "Security event detection",
-            "Cloud monitoring",
-            "Email alerts"
-        ],
-        status: "Completed",
-        documentation: "https://nextwork.ai/intense_teal_innocent_alligator/docs/aws-security-monitoring"
-    }
-];
-
-export const data_projects = [
-    {
-        title: "Data Engineering with PostgreSQL & Docker MCP",
-        image: PostgresDockerMCPImg,
-        description: "Built a PostgreSQL data environment with Docker and managed it through Docker MCP, exploring AI-assisted database workflows and relational data modeling.",
-        architecture: "Containerized PostgreSQL database managed with Docker and MCP tooling.",
-        technologies: ["PostgreSQL", "Docker", "MCP", "SQL"],
-        highlights: [
-            "Provisioned a PostgreSQL database with Docker",
-            "Explored relational database design",
-            "Used Docker MCP to interact with the database",
-            "Verified schemas and relationships"
-        ],
-        features: [
-            "Containerized database",
-            "Relational data modeling",
-            "AI-assisted database workflows"
-        ],
-        status: "Completed",
-        documentation: "https://nextwork.ai/intense_teal_innocent_alligator/docs/mcp-data-engineer1"
-    },
-    {
-        title: "Analytics Engineering with dbt MCP",
-        image: DbtMCPImg,
-        description: "Built and tested analytics models using dbt, applying transformations and automated data quality checks to create reliable analytics workflows.",
-        architecture: "dbt project with SQL transformations, models, and automated tests",
-        technologies: ["dbt", "SQL", "PostgreSQL", "MCP"],
-        highlights: [
-            "Built reusable dbt models",
-            "Added automated data quality tests",
-            "Validated transformed datasets",
-            "Practiced analytics engineering workflows"
-        ],
-        features: [
-            "Data transformations",
-            "Automated testing",
-            "Analytics-ready models"
-        ],
-        status: "Completed",
-        documentation: "https://nextwork.ai/intense_teal_innocent_alligator/docs/mcp-data-engineer2"
-    },
-    {
-        title: "Data Analysis with Jupyter MCP",
-        image: JupyterMCPImg,
-        description: "Performed exploratory data analysis using Jupyter notebooks, generating insights and visualizations with Python libraries",
-        architecture: "Notebook-based data analysis workflow using Jupyter and MCP.",
-        technologies: ["Jupyter", "Python", "Pandas", "Matplotlib", "MCP"],
-        highlights: [
-            "Queried and analyzed structured datasets",
-            "Created visualizations with Matplotlib",
-            "Used Jupyter MCP to streamline workflows",
-        ],
-        features: [
-            "Interactive notebooks",
-            "Data visualization",
-            "Exploratory analysis"
-        ],
-        status: "Completed",
-        documentation: "https://nextwork.ai/intense_teal_innocent_alligator/docs/mcp-data-engineer3"
-    },
-    {
-        title: "Data Visualization with Grafana",
-        image: GrafanaImg,
-        description: "Built interactive dashboards in Grafana using PostgreSQL data to visualize business metrics and monitor trends.",
-        architecture: "Grafana dashboards connected to PostgreSQL for real-time visualization.",
-        technologies: ["Grafana", "PostgreSQL", "SQL"],
-        highlights: [
-            "Connected Grafana to PostgreSQL",
-            "Created KPI dashboards",
-            "Built charts for trends and business metrics",
-            "Practiced observability and visualization concepts"
-        ],
-        features: [
-            "Interactive dashboards",
-            "Business metrics",
-            "Real-time visualization"
-        ],
-        status: "Completed",
-        documentation: "https://nextwork.ai/intense_teal_innocent_alligator/docs/mcp-data-engineer4"
     }
 ];
